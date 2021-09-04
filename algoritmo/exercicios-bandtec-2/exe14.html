@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+
+    <button onclick="init()" id="botao_iniciar" style="display: block; width: 100px; height: 100px; background-position: center;">Iniciar Jogo</button>
+
+
+    <div style="display: none;" id="div_main">
+
+
+        <span style="float: right; "><img onclick="goku_dano()" src="goku.jpg" alt="goku" style="height: 200px; width: 200px"></span>
+        <span style="float: left;"><img onclick="kuririn_dano()" src="kuririn.jpg" alt="kuririn" style="height: 200px; width: 200px"></span>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <div id="barra_red" style="float: right; background-color: red; height: 50px; width: 0%;">Golpes sofridos pelo lutador 1: <span id="cont_1"></span></div><br><br>
+        <div id="barra_green" style="float: left; background-color: green; height: 50px; width: 0%;">Golpes sofridos pelo lutador 2: <span id="cont_2"></span></div><br><br>
+
+
+
+    </div>
+
+
+</body>
+</html>
+
+<script>
+
+    var vida_goku = 100;
+    var vida_kuririn = 100;
+    barra_red.style.width = `${vida_goku}%`
+    barra_green.style.width = `${vida_goku}%`
+
+    function init(){
+
+        botao_iniciar.style.display = "none";
+        div_main.style.display = "block";
+
+    }
+    function goku_dano(){
+
+        vida_goku -= 5;
+        barra_red.style.width = `${vida_goku}%`
+        cont_1.innerHTML = vida_goku;
+        
+
+    }
+    function kuririn_dano(){
+
+        vida_kuririn -= 5;
+        barra_green.style.width = `${vida_kuririn}%`
+        cont_2.innerHTML = vida_kuririn;
+        
+    }
+
+</script>

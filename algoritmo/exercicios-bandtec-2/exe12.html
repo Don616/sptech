@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    <h1>Cofrinho do Friezza</h1>
+    <span>Valor guardado no cofrinho: <b><span id="valor">$0.00</span></b></span><br>
+    Deposite um valor:
+    <input type="text" id="valor_inserido" placeholder="Ex: 200.00"><br>
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar()">Tirar toda a grana</button>
+    <br><br>
+    Quantidade de Depósitos: <span id="qt_deposito"></span><br>
+    Quantidade de Retiradas: <span id="qt_retirada"></span><br>
+    
+</body>
+</html>
+
+<script>
+
+    var valor_depositado = 0;
+    var valor_retirado = 0;
+    var contar_deposito = 0;
+    var contar_retirada = 0;
+
+    function depositar(){
+
+        valor_depositado += Number(valor_inserido.value);
+        contar_deposito += 1;
+        valor_inserido.value = ``
+        valor.innerHTML = `$${valor_depositado.toFixed(2)}`
+        qt_deposito.innerHTML = `${contar_deposito.toFixed(0)}x`
+
+    }
+    function retirar(){
+
+        valor_retirado = valor_depositado;
+        contar_retirada += 1;
+        valor_depositado = 0;
+        valor.innerHTML = `$${valor_depositado.toFixed(2)}`
+        qt_retirada.innerHTML = `${contar_retirada.toFixed(0)}x`
+        
+
+    }
+
+</script>

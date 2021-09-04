@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    
+    <h2>Entregas para São Paulo</h2>
+
+    <div style="display: block;" id="div_inputs">
+    ZL:<input type="text" id="entregas_zl"><br>
+    ZS:<input type="text" id="entregas_zs"><br>
+    ZN:<input type="text" id="entregas_zn"><br>
+    ZO:<input type="text" id="entregas_zo"><br>
+    <button onclick="carregar_agenda()">Carregar Agenda</button>
+    </div>
+    <div style="display: none;" id="div_entregas">
+        Entregas ZL: <span id="span_x"></span><br>
+        Entregas ZS: <span id="span_y"></span><br>
+        Entregas ZN: <span id="span_z"></span><br>
+        Entregas ZO: <span id="span_w"></span><br>
+        Entregas Restantes: <span id="span_t"></span><br><br>
+        <button onclick="button_zl()">Entregar ZL</button>
+        <button onclick="button_zs()">Entregar ZS</button>
+        <button onclick="button_zn()">Entregar ZN</button>
+        <button onclick="button_zo()">Entregar ZO</button>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var zl = 0;
+    var zs = 0;
+    var zn = 0;
+    var zo = 0;
+
+    function carregar_agenda(){
+
+        zl = Number(entregas_zl.value);
+        zs = Number(entregas_zs.value);
+        zn = Number(entregas_zn.value);
+        zo = Number(entregas_zo.value);
+        mostrar()
+        atualizar()
+
+    }
+
+    function mostrar(){
+
+        div_inputs.style.display = "none";
+        div_entregas.style.display = "block";
+
+    }
+    function atualizar(){
+        span_x.innerHTML = zl;
+        span_y.innerHTML = zs;
+        span_z.innerHTML = zn;
+        span_w.innerHTML = zo;
+        span_t.innerHTML = zl + zs + zn + zo;
+
+    }
+
+    function button_zl(){
+        zl -= 1;
+        span_x.innerHTML = zl;
+        atualizar()
+
+    }
+    function button_zs(){
+        zs -= 1;
+        span_y.innerHTML = zs;
+        atualizar()
+
+    }
+    function button_zn(){
+        zn -= 1;
+        span_z.innerHTML = zn; 
+        atualizar() 
+
+    }
+    function button_zo(){
+        zo -= 1;
+        span_w.innerHTML = zo;
+        atualizar()
+        
+    }
+
+</script>
