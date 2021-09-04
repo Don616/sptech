@@ -1,2 +1,5 @@
-# bandtec
-Repositório para guardar aulas da faculdade BandTec
+# Bandtec Digital School
+### Repositório para guardar aulas da faculdade BandTec
+---
+Repositórios internos:
+- Algoritmo;
