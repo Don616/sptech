@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista D - Exe 5</title>
+</head>
+<body>
+
+    <center>
+    <h2>Tabuada do Friezza</h2>
+    <h5>Escolha um número abaixo e a sua tabuada correspondente será mostrada</h5>
+
+    <select onchange="tabuada()" id="tabuada_1">
+        <option value="">Escolha um valor</option>
+        <option value="2">Tabuada de 2</option>
+        <option value="3">Tabuada de 3</option>
+        <option value="4">Tabuada de 4</option>
+        <option value="5">Tabuada de 5</option>
+        <option value="6">Tabuada de 6</option>
+        <option value="7">Tabuada de 7</option>
+        <option value="8">Tabuada de 8</option>
+        <option value="9">Tabuada de 9</option>
+    </select>
+
+    
+
+    <div id="resultado" style="display: none;">
+        <h4>Resultado:</h4>
+        <span id="span_0"></span>
+
+    </center>
+
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+    
+    function tabuada(){
+
+        span_0.innerHTML = ``;
+        
+        resultado.style.display = "block";
+
+        var num_tabuada = tabuada_1.value;
+
+        for(var num_variavel = 1;num_variavel < 11;num_variavel++){
+
+            span_0.innerHTML += ` ${num_tabuada} x ${num_variavel}  = ${num_tabuada * num_variavel}<br>`;
+
+        }
+
+    }
+
+
+
+</script>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista D - Exe 11</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Cofrinho do Frezza - v2</h2>
+        <h4>Para depositar, selecione o valor corrente da moeda desejada</h4>
+        <br>
+        <img onclick="abrirCofre()" style="height: 120px; width: 120px;" id="img_cofre" src="https://heal.org.br/wp-content/uploads/2017/05/cofrinho-solidario.png" alt="cofre"><br>
+        <b>Abrir Cofre!</b>
+        <br><br>
+
+        <div style="display: none;" id="div_0">
+
+        <select onchange="selectMoeda()" id="select_moeda">
+        
+            <option value="">-- Escolha --</option>
+            <option value="5">R$ 5,00</option>
+            <option value="10">R$ 10,00</option>
+            <option value="20">R$ 20,00</option>
+            <option value="50">R$ 50,00</option>
+            <option value="100">R$ 100,00</option>
+            <option value="200">R$ 200,00</option>
+        
+        </select>
+        </div>
+        <br><br>
+        <div id="div_txt1" style="display: none;">
+
+            <img style="height: 120px; width: 120px;" onclick="depositar()" src="https://cdn2.iconfinder.com/data/icons/pinpoint-interface/48/down-payment-512.png" alt="depositar">
+            <img style="height: 120px; width: 120px;" onclick="gastar()" src="https://static.vecteezy.com/ti/vetor-gratis/p1/2206119-icone-de-retirada-de-dinheiro-gr%C3%A1tis-vetor.jpg" alt="gastar">
+        
+        </div>
+
+        <div id="div_txt2" style="display: none;">
+
+            O saldo do cofrinho é de R$<b><span id="span_saldo"></span></b><br>
+            A quantidade de operações foi: <b><span id="span_operacao"></span></b><br>
+            Média de depósitos: R$<b><span id="span_deposito"></span></b><br>
+            <br>
+
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var saldo_disponivel = 0;
+    var media_depositos = 0;
+    var operacoes = 0;
+    var valor_para_depositar = 0;
+    
+
+    function abrirCofre(){
+
+        if(div_0.style.display == "none"){
+            div_0.style.display = "block";
+
+        } else{
+            div_0.style.display = "none"
+            div_txt1.style.display = "none"
+            div_txt2.style.display = "none"
+
+        }
+
+
+    }
+
+    function selectMoeda(){
+
+        div_txt1.style.display = "block";
+        valor_para_depositar = Number(select_moeda.value);
+
+    }
+
+    function depositar(){
+
+        div_txt2.style.display = "block";
+        saldo_disponivel += valor_para_depositar;
+        operacoes++;
+        calcMEdiaDeposito()
+        atualizaHTML()
+
+    }
+
+    function gastar(){
+
+        div_txt2.style.display = "block";
+        saldo_disponivel = 0;
+        media_depositos = 0;
+        operacoes = 0;
+        atualizaHTML()
+
+
+    }
+
+    function calcMEdiaDeposito(){
+
+        media_depositos = saldo_disponivel / operacoes;
+        atualizaHTML()
+
+    }
+
+    function atualizaHTML(){
+
+        span_saldo.innerHTML = `${saldo_disponivel}`;
+        span_operacao.innerHTML = `${operacoes}`;
+        span_deposito.innerHTML = `${media_depositos.toFixed(2)}`;
+
+
+    }
+
+
+
+
+</script>

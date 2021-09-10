@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista D - Exe 6</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Estações do ano: </h2>
+
+        <select onchange="estacao()" id="select_estacao">
+
+            <option value="https://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg">Escolha uma estação</option>
+            <option value="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">Primavera</option>
+            <option value="https://jeonline.com.br/site/uploads/posts/6596_22122015154333.jpg">Verão</option>
+            <option value="https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/11/folhas.jpg">Outono</option>
+            <option value="https://www.infoescola.com/wp-content/uploads/2008/10/inverno.jpg">Inverno</option>
+
+        </select>
+        <br><br>
+
+        <img id="_img_" src="https://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" style="width: 200px; height: 200px;">
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function estacao(){
+
+        _img_.src = `${select_estacao.value}`
+
+    }
+
+</script>
