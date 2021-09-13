@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de latinhas</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Contador de Latinhas do Amin</h2>
+        <input placeholder="Quantas latinhas toma por dia?" id="input_latinhas">
+        <br>
+        <button onclick="verificador()">Quantos refris</button>
+        <br><br>
+
+        <div style="display: none;" id="div_texto">
+
+            O senhor Amin Tiroso consome <span id="quantidade_anual"></span> por ano! <br>
+            <span style="display: none;" id="aviso_diabetes">Cuidado com a diabetes!</span>
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    quantidade_latinhas = 0;
+    total_anual = 0;
+
+    function verificador(){
+
+        quantidade_latinhas = Number(input_latinhas.value);
+        total_anual = quantidade_latinhas * 365;
+
+        quantidade_anual.innerHTML = `${total_anual}`
+
+        mostrarTexto()
+        verificadorDiabetes()
+
+    }
+
+    function verificadorDiabetes(){
+
+        if(total_anual >= 500){
+            aviso_diabetes.style.display = "block";
+        } else {
+            aviso_diabetes.style.display = "none";
+        }
+
+    }
+    function mostrarTexto(){
+        
+        div_texto.style.display = "block";
+
+    }
+
+</script>
