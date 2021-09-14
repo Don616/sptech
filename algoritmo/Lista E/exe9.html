@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 9</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Quão viciado em série você é?</h2>
+        
+        <input id="input_nome_serie" placeholder="Digite uma série que você acompanha">
+        <input id="input_episodios_assistidos" placeholder="Digite quantos episódios assistiu">
+        <br><br>
+        <button onclick="verificarVicio()">Verificar meu vício</button>
+        <br><br>
+
+        <span style="display: none;" id="span_gosta_serie">Vejo que gosta da série <span id="span_nome_serie"></span>, assistiu mais de <span id="span_num_horas"></span> horas!</span><br>
+        <span style="display: none;" id="span_procure_um_medico">Você realmente está viciado, procure um profissional de saúde!</span>
+        <span style="display: none;" id="span_nao_gosta_serie">Vejo que você não gosta de <span id="span_nome_serie1"></span>, Parabéns!</span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var episodios_assistidos = 0;
+    var tempo_gasto_minutos = 0;
+    var tempo_gasto_horas = 0;
+
+    function verificarVicio(){
+
+        episodios_assistidos = Number(input_episodios_assistidos.value);
+        tempo_gasto_minutos = episodios_assistidos * 22;
+        tempo_gasto_horas = tempo_gasto_minutos / 60;
+
+        if(tempo_gasto_horas <= 0){
+
+            span_nao_gosta_serie.style.display = "block";
+            span_nome_serie1.innerHTML = `${input_nome_serie.value}`
+            span_gosta_serie.style.display = "none";
+            span_procure_um_medico.style.display = "none";
+
+        } else{
+
+            span_gosta_serie.style.display = "block";
+            span_nao_gosta_serie.style.display = "none";
+            span_nome_serie.innerHTML = `${input_nome_serie.value}`
+            span_num_horas.innerHTML = `${tempo_gasto_horas.toFixed(0)}`
+
+            if(tempo_gasto_horas > 30){
+
+                span_procure_um_medico.style.display = "block";
+
+            } else {
+                span_procure_um_medico.style.display = "none";
+            }
+
+        }
+
+    }
+
+</script>
+
+
+

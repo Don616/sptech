@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 10</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Verificador de Saldo</h2>
+
+        <input id="input_saldo_atual" placeholder="Digite seu saldo atual">
+        <br><br>
+
+        <button onclick="verificarFinancas()">Ver finanças</button>
+        <br><br>
+
+        Seu saldo atual é: <span id="span_saldo_atual"></span>
+        <br><br>
+        <span style="display: none;" id="mostrar_barriga"><img id="seu_barriga" alt="seu barriga"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function verificarFinancas(){
+
+        var saldo_atual = input_saldo_atual.value;
+
+        if(saldo_atual > 0){
+
+            span_saldo_atual.innerHTML = "POSITIVO";
+            span_saldo_atual.style.color = "blue";
+
+        } else if(saldo_atual == 0){
+
+            span_saldo_atual.innerHTML = "ZERADO";
+            span_saldo_atual.style.color = "black";
+
+        } else {
+
+            span_saldo_atual.innerHTML = "NEGATIVO";
+            span_saldo_atual.style.color = "red";
+            mostrar_barriga.style.display = "block";
+            seu_barriga.src = "https://o.remove.bg/downloads/16e92e94-bb79-446e-90ec-3f896da33944/barriga-removebg-preview.png";
+
+        }
+
+
+    }
+
+</script>

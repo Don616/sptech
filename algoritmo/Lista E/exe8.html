@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 8</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Peso médio dos elevadores</h2>
+
+        <input id="input_quantidade_homens" placeholder="Digite a quantidade de homens">
+        <input id="input_quantidade_mulheres" placeholder="Digite a quantidade de mulheres">
+        <br><br>
+
+        <button onclick="analisarPeso()">Analisar Peso</button>
+        <br><br>
+
+        <div style="display: none;" id="div_mostrar">
+
+            Este elevador suporta 800kg e o peso estimado  desta lotação é de <span id="span_peso_estimado"></span>kg.
+            <span style="color:blue; display: none" id="span_descer_alguem">Será necessário descer alguem para que este elevador se movimente!</span>
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var quantidade_homens = 0;
+    var quantidade_mulheres = 0;
+    var peso_homens = 0;
+    var peso_mulheres = 0;
+    var peso_estimado = 0;
+
+    function analisarPeso(){
+
+        quantidade_homens = Number(input_quantidade_homens.value);
+        quantidade_mulheres = Number(input_quantidade_mulheres.value);
+        peso_homens = quantidade_homens * 80;
+        peso_mulheres = quantidade_mulheres * 60;
+        peso_estimado = peso_homens + peso_mulheres;
+        mostrarHTML()
+
+    }
+
+    function mostrarHTML(){
+
+        div_mostrar.style.display = "block";
+        span_peso_estimado.innerHTML = `${peso_estimado}`;
+
+        if(peso_estimado > 800){
+
+            span_descer_alguem.style.display = "block";
+
+        }
+
+    }
+
+
+</script>

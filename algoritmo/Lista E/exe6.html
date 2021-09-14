@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 6</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Calculadora Financeira</h2>
+        
+        <input id="input_renda_familiar" placeholder="Digite sua renda familiar">
+        <input id="input_valor_prestacao" placeholder="Digite o valor da prestação">
+        <br><br>
+        
+        <button onclick="verificarFinanciamento()">Verificar Financiamento</button>
+
+        <div id="div_txt" style="display: none;">
+
+            A prestação corresponde a <span id="span_prestacao"></span>% da renda familiar.
+            <br><br>
+            <b><span id="txt_completar_renda" style="color:red; display: none;">Será necessário complementar a renda familiar!!!</span></b>
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var renda_familiar = 0;
+    var valor_prestacao = 0;
+    var porcentagem = 0;
+
+    function verificarFinanciamento(){
+
+        renda_familiar = Number(input_renda_familiar.value);
+        valor_prestacao = Number(input_valor_prestacao.value);
+        porcentagem = (valor_prestacao / renda_familiar) * 100;
+
+        span_prestacao.innerHTML = `${porcentagem.toFixed(1)}`
+        exibirMensagem()
+
+
+    }
+
+    function exibirMensagem(){
+
+        div_txt.style.display = "block";
+
+        if(porcentagem > 30){
+
+            txt_completar_renda.style.display = "block";
+
+        }
+
+    }
+
+</script>

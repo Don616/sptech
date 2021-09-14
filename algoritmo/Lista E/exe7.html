@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Exe 7</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Quem entrou no cheque especial</h2>
+        <input id="input_saldo_conta" placeholder="Digite o saldo da sua conta">
+        <input id="input_valor_debito" placeholder="Digite o valor do débito">
+        <br><br>
+        <button onclick="analisarConta()">Analisar Conta</button>
+        <br><br>
+        <span id="span_saldo_final"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var saldo_conta = 0;
+    var valor_debito = 0;
+    var saldo_final = 0;
+
+    function analisarConta(){
+
+        saldo_conta = Number(input_saldo_conta.value);
+        valor_debito = Number(input_valor_debito.value);
+        debitar()
+    }
+
+
+    function debitar(){
+
+        saldo_final = saldo_conta - valor_debito;
+
+
+        span_saldo_final.innerHTML = `O saldo atual da sua conta corrente é de R$${saldo_final}`;
+
+        if(saldo_final < 0){
+
+            span_saldo_final.style = "font-weight:bold; color: red";
+
+        }
+
+    }
+
+</script>
