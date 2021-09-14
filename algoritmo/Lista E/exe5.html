@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 5</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Cidade Paulopolis</h2>
+
+        <input id="input_quantidade_kwh" placeholder="Digite a quantidade de kWh/mês">
+        <br><br>
+        <button onclick="calcularConta()">Calcular conta de luz</button>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var quantidade_kwh = 0;
+    var custo_luz = 0.85;
+    var custo_mensal = 0;
+    var desconto_dez = 0
+
+    function calcularConta(){
+
+        quantidade_kwh = Number(input_quantidade_kwh.value);
+        custo_mensal = quantidade_kwh * custo_luz;
+        desconto_dez = ((custo_mensal).toFixed(0) * 0.10);
+
+        if(quantidade_kwh < 100){
+
+            custo_mensal -= desconto_dez;
+
+        }
+
+        alert(`O valor a ser pago será de R$${custo_mensal.toFixed(2)}`)
+
+
+    }
+
+</script>

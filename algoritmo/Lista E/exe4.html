@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 4</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Valor da Pizza</h2>
+
+        <input id="input_valor_pizza" placeholder="Digite o valor da sua pizza">
+        <input id="input_quantidade_amigos" placeholder="Digite a quantidade de amigos">
+        <br><br>
+
+        <button onclick="calcularValorPizza()">Rola a Pizza?</button>
+        <br>
+
+        <div style="display: none;" id="mostrar_txt">
+
+            Cada amigo vai pagar R$<span id="span_media_pizza"></span>
+            <span style="display: none;" id="span_deu_ruim">Deu ruim, pizza muito cara!</span>
+
+        </div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var valor_pizza = 0;
+    var quantidade_amigos = 0;
+    var media_pizza = 0;
+
+    function calcularValorPizza(){
+
+        valor_pizza = Number(input_valor_pizza.value);
+        quantidade_amigos = Number(input_quantidade_amigos.value);
+        media_pizza = valor_pizza / quantidade_amigos;
+        mostrarHTML()
+
+    }
+
+    function mostrarHTML(){
+
+        span_media_pizza.innerHTML = `${media_pizza.toFixed(2)}`
+        mostrar_txt.style.display = "block";
+
+        if(media_pizza > 20){
+
+            span_deu_ruim.style.display = "block";
+
+        }
+
+
+    }
+
+</script>

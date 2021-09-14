@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Média de Notas</h2>
+        
+        <input placeholder="Insira a nota de uma matéria" id="input_nota1">
+        <input placeholder="Insira a nota de uma matéria" id="input_nota2">
+        <input placeholder="Insira a nota de uma matéria" id="input_nota3">
+
+        <br><br>
+        <button onclick="analisarDesempenho()">Analisar desempenho</button>
+        <br><br>
+
+        <div style="display: none;" id="div_resultado">
+
+            Sua média de notas foi de: <span id="span_nota_media"></span>
+            <span style="display: none;" id="span_fora_de_serie">Parabéns, você é fora de série!</span>
+
+        </div>
+
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var total_notas = 0;
+    var media_notas = 0;
+
+
+    function analisarDesempenho(){
+
+        total_notas = Number(input_nota1.value) + Number(input_nota2.value) + Number(input_nota3.value);
+        media_notas = total_notas / 3;
+        //
+        span_nota_media.innerHTML = `${media_notas.toFixed(2)}`
+        mostrarHTMLs()
+
+    }
+
+    function mostrarHTMLs(){
+
+        div_resultado.style.display = "block";
+
+        if(media_notas >= 9.4){
+            span_fora_de_serie.style.display = "block";
+        }
+        
+
+    }
+
+
+</script>
