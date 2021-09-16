@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 9 - Else</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Venda de animais ilegais</h2>
+
+        <select id="select_animais" onchange="selectAnimais()" >
+
+            <option value="">- Escolha uma espécie -</option>
+            <option value="option_oviparo">Ovíparo</option>
+            <option value="option_mamifero">Mamífero</option>
+
+        </select>
+        <br><br>
+
+        <div id="div_oviparo" style="display: none;">
+
+            <select id="select_oviparos" onchange="selectOviparos()">
+                
+                <option value="">- Escolha um Ovíparo - </option>
+                <option value="option_galinha">Galinha</option>
+                <option value="option_peixe">Peixe</option>
+                <option value="option_tartaruga">Tartaruga</option>
+            
+            </select>
+
+        </div>
+        <!---->
+        <div id="div_mamifero" style="display: none;">
+
+            <select id="select_mamiferos" onchange="selectMamiferos()">
+                
+                <option value="">- Escolha um Mamífero - </option>
+                <option value="option_elefante">Elefante</option>
+                <option value="option_porco">Porco</option>
+                <option value="option_coelho">Coelho</option>
+            
+            </select>
+
+        </div>
+
+        <br><br><br>
+
+        <div id="div_img" style="display: none;">
+
+            <img id="img_animais" src="" alt="imagem representacao">
+
+        </div>
+        <br><br>
+        <span id="span_input" style="display: none;">
+            <b>Valor de compra do animal</b><br>
+        <input id="input_valor_animal">
+        <br>
+        <button onclick="calcularImposto()">Calcular Imposto</button>
+        <br>
+        <span style="display: none;" id="span_txt_imposto">Seu imposto será de R$<b><span id="span_valor_imposto"></span></b></span>
+        </span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var valor_animal = 0;
+    var valor_oviparo = 0.05;
+    var valor_mamifero = 0.10;
+
+
+    function selectAnimais(){
+
+        if(select_animais.value == "option_oviparo"){
+
+            div_mamifero.style.display = "none";
+            div_oviparo.style.display = "block";
+            
+    
+
+        } else if(select_animais.value == "option_mamifero"){
+
+            div_oviparo.style.display = "none";
+            div_mamifero.style.display = "block";
+            
+
+        }
+
+    }
+
+    function selectOviparos(){
+
+        if(select_oviparos.value == "option_galinha"){
+
+            div_img.style.display = "block";
+            img_animais.src = "https://www.revistarural.com.br/sitenovo/wp-content/uploads/2019/05/galinha29052019.jpg";
+            span_input.style.display = "block";
+
+        } else if(select_oviparos.value == "option_peixe"){
+
+            div_img.style.display = "block";
+            img_animais.src = "http://s2.glbimg.com/apjRRNwHzKc-w_-Zr2OjPBS9OGk=/e.glbimg.com/og/ed/f/original/2017/11/21/blob-fish-global-mascot.jpg";
+            span_input.style.display = "block";
+
+        } else if(select_oviparos.value == "option_tartaruga"){
+
+            div_img.style.display = "block";
+            img_animais.src = "https://img.estadao.com.br/thumbs/640/resources/jpg/8/6/1603832656468.jpg";
+            span_input.style.display = "block";
+
+        }
+
+    }
+
+    function selectMamiferos(){
+
+        if(select_mamiferos.value == "option_elefante"){
+
+            div_img.style.display = "block";
+            img_animais.src = "https://www.infoescola.com/wp-content/uploads/2016/12/elefante-asiatico-198685685.jpg";
+            span_input.style.display = "block";
+
+        } else if(select_mamiferos.value == "option_porco"){
+
+            div_img.style.display = "block";
+            img_animais.src = "https://1.bp.blogspot.com/-IOBTniAjg5k/YNtXq7SM9XI/AAAAAAABEyQ/PEt2zrqRJ_4zV9ap5-MBB0tQMzuK4a9MgCLcBGAsYHQ/s338/porco.png";
+            span_input.style.display = "block";
+
+        } else if(select_mamiferos.value == "option_coelho"){
+
+            div_img.style.display = "block";
+            img_animais.src = "https://www.dicaspetz.com.br/wp-content/uploads/2021/02/com-quantos-dias-os-filhotes-de-coelhos-comecam-a-comer-roedores.jpg";
+            span_input.style.display = "block";
+
+        }
+
+
+    }
+
+    function calcularImposto(){
+
+        valor_animal = Number(input_valor_animal.value);
+
+        if(select_animais.value == "option_oviparo"){
+
+            var valor_imposto = 0;
+            valor_imposto += valor_animal * valor_oviparo;
+            span_txt_imposto.style.display = "block";
+            span_valor_imposto.innerHTML = `${valor_imposto.toFixed(2)}`
+
+        }
+        if(select_animais.value == "option_mamifero"){
+
+            var valor_imposto = 0;
+            valor_imposto += valor_animal * valor_mamifero;
+            span_txt_imposto.style.display = "block";
+            span_valor_imposto.innerHTML = `${valor_imposto.toFixed(2)}`
+
+}
+
+    }
+
+
+</script>
+
+<style>
+
+#img_animais{
+
+    height: 200px;
+    width: 200px;
+
+}
+
+</style>

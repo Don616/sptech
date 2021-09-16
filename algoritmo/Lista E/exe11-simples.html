@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 11</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Verificador</h2>
+        <input id="input_quantidade_filhos" placeholder="Digite a quantidade de filhos">
+        <br><br>
+        <button onclick="analisarFamilia()">Analisar Família</button>
+        <br>
+        <div id="div_txt"></div>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var quantidade_filhos = 0;
+
+    function analisarFamilia(){
+
+        quantidade_filhos = Number(input_quantidade_filhos.value);
+
+        if(quantidade_filhos >= 1){ div_txt.innerHTML += `Não tem TV <br>` }
+        if(quantidade_filhos >= 2){ div_txt.innerHTML += `Não tem internet <br>` }
+        if(quantidade_filhos >= 3){ div_txt.innerHTML += `Não tem video game <br>` }
+        if(quantidade_filhos >= 4){ div_txt.innerHTML += `Não tem Netflix <br>` }
+
+
+    }
+
+
+</script>

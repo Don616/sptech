@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe Else - 06</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Verificador de Temperatura</h2>
+        <input id="input_temperatura" placeholder="Digite uma temperatura">
+        <br><br>
+        <button onclick="verificarClima()">Verificar Clima</button>
+        <br><br>
+        
+        <b><span id="span_txt"></span></b><br><br>
+        <img id="img_maça" src="https://www.publicdomainpictures.net/pictures/40000/velka/question-mark.jpg" alt="imagem do clima">
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function verificarClima(){
+
+        var temperatura = Number(input_temperatura.value);
+
+        if(temperatura < 10){
+            span_txt.innerHTML = `Apropriada p/ conservar alimento`;
+            img_maça.src = "https://images.freeimages.com/images/premium/previews/3964/39645686-cut-half-an-apple.jpg";
+        } else {
+            span_txt.innerHTML = `Inapropriada p/ conservar alimento`;
+            img_maça.src = "https://static8.depositphotos.com/1303277/859/i/600/depositphotos_8591724-stock-photo-moldy-apple.jpg";
+        }
+
+
+    }
+
+</script>
+
+<style>
+
+#img_maça{
+
+    height: 100px;
+    width: 100px;
+
+}
+
+</style>
