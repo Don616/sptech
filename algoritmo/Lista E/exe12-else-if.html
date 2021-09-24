@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 12 - Else If</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Contador de cliques</h2>
+        Clique no botão abaixo para computar os cliques!
+        <br><br>
+        <button onclick="contadorCliques()">Clique Aqui!</button><br>
+        <br>
+        <div id="div_clique" style="border-radius: 5000px; width: 60px; height: 60px; background-color: white; align-items: center; justify-content: center; display: flex;"></div>
+        <br><br>
+        <span id="span_txt"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var contador = 0;
+
+    function contadorCliques(){
+
+        contador++;
+
+        if(contador < 5){
+
+            span_txt.innerHTML = `Dedo fraquinho, hein`;
+            div_clique.style.backgroundColor = "aqua";
+
+        } else if(contador < 10){
+
+            span_txt.innerHTML = `Dedo bom, mano!`;
+            div_clique.style.backgroundColor = "green";
+
+        } else if(contador < 15){
+
+            span_txt.innerHTML = `Gosta de clicar, hein!`;
+            div_clique.style.backgroundColor = "yellow";
+
+        } else {
+
+            span_txt.innerHTML = `Eita dedo nervoso!`;
+            div_clique.style.backgroundColor = "red";
+
+        }
+
+        div_clique.innerHTML = `${contador}`;
+
+    }
+
+</script>

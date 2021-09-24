@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 4 - Else - If</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Peso Crianças</h2>
+        <input type="text" id="input_peso"><br>
+        <button onclick="avaliarPeso()">Avaliar</button>
+        <br><br>
+        <span id="span_peso"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function avaliarPeso(){
+
+        var peso = Number(input_peso.value);
+        input_peso.value = ``;
+        
+        if(peso == 18.3){
+            span_peso.innerHTML = `Peso perfeito (se o peso for exatamente 18.3kg)`
+        } else if(peso <= 13.5){
+            span_peso.innerHTML = `Abaixo do peso (se peso até 13.5kg)`
+        } else if(peso <= 21.2){
+            span_peso.innerHTML = `Peso na média (se peso maior que 13.5kg até 21.2kg)`
+        } else if(peso > 21.2){
+            span_peso.innerHTML = `Acima do peso (se peso maior que 21.2kg)`
+        }
+
+    }
+
+</script>

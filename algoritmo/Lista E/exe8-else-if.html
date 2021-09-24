@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 8 - Else - If</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Calculadora de Calorias</h2>
+
+        <input type="text" id="input_pao" placeholder="Quantos pães franceses você come por dia?"><br>
+        <input type="text" id="input_biscoito" placeholder="Quantos biscoitos você come por dia?"><br>
+        <input type="text" id="input_achocolatado" placeholder="Quantos copos de nescau você toma por dia?"><br>
+        <br>
+        <button onclick="verificarCalorias()">Verificar Calorias</button>
+        <br><br>
+        <span id="span_info"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var caloria_pao = 50;
+    var caloria_biscoito = 80;
+    var caloria_achocolatado = 70;
+
+    function verificarCalorias(){
+
+        var quantidade_pao = Number(input_pao.value);
+        var quantidade_biscoito = Number(input_biscoito.value);
+        var quantidade_achocolatado = Number(input_achocolatado.value);
+        input_pao.value = ``;
+        input_biscoito.value = ``;
+        input_achocolatado.value = ``;
+
+        var consumo_pao = caloria_pao * quantidade_pao;
+        var consumo_biscoito = caloria_biscoito * quantidade_biscoito;
+        var consumo_achocolatado = caloria_achocolatado * quantidade_achocolatado;
+        var total_calorias = consumo_pao + consumo_biscoito + consumo_achocolatado;
+
+        if(total_calorias < 200){
+            span_info.innerHTML = `Você consumiu ${total_calorias} calorias. Parabéns, vai sair em forma da quarentena!`;
+        } else if(total_calorias < 400){
+            span_info.innerHTML = `Você consumiu ${total_calorias} calorias. Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+        } else{
+            span_info.innerHTML = `Você consumiu ${total_calorias} calorias. Bom, acho que muitos não vão te reconhecer após a quarentena`;
+        }
+
+    }
+
+</script>

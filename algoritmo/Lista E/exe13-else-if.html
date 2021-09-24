@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Else If</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Bank of Bandtec</h2>
+        Valor Guardado: R$<span id="span_valor"></span><br>
+        <span id="span_txt"></span><br>
+        <span id="span_txt2"></span><br>
+        <br><br>
+        <button onclick="guardarCinco()">Guardar 5</button>
+        <button onclick="gastarDez()">Gastar 10</button>
+        <br><br>
+        
+        
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var valor_guardado = 0;
+
+    function guardarCinco(){
+
+        valor_guardado += 5;
+        span_valor.innerHTML = `${valor_guardado}`;
+
+        if(valor_guardado > 0){
+
+            span_txt.innerHTML = `Finanças OK!`
+            span_txt.style.color = "blue";
+
+        } else if(valor_guardado > 100){
+
+            span_txt2.innerHTML = `#ostentação`;
+
+        } else if(valor_guardado < 0){
+
+            span_txt2.innerHTML = `Finanças em Perigo!`
+
+        }
+
+    }
+
+</script>
