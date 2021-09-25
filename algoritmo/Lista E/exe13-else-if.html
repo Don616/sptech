@@ -34,19 +34,41 @@
 
         valor_guardado += 5;
         span_valor.innerHTML = `${valor_guardado}`;
+        verificador()
 
-        if(valor_guardado > 0){
+    }
 
-            span_txt.innerHTML = `Finanças OK!`
-            span_txt.style.color = "blue";
+    function gastarDez(){
 
-        } else if(valor_guardado > 100){
+        valor_guardado -= 10;
+        span_valor.innerHTML = `${valor_guardado}`;
+        verificador()
+
+    }
+
+    function verificador(){
+
+
+        if(valor_guardado >= 100){
 
             span_txt2.innerHTML = `#ostentação`;
 
-        } else if(valor_guardado < 0){
+        } else if(valor_guardado >= 0){
 
-            span_txt2.innerHTML = `Finanças em Perigo!`
+            span_txt.innerHTML = `Finanças OK!`
+            span_txt.style.color = "blue";
+            span_txt2.innerHTML = ``;
+
+        } else if(valor_guardado <= -20){
+
+            span_txt2.innerHTML = `Quase um Corinthians!`;
+
+        }else if(valor_guardado <= 0){
+
+            
+            span_txt.innerHTML = `Finanças em Perigo!`;
+            span_txt.style.color = "red";
+            span_txt2.innerHTML = ``;
 
         }
 
