@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+#div1{
+
+    background-color: rgb(139, 3, 139);
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#div2{
+
+    background-color: #FF69B4;
+    height: 100%;
+    width: 250px;
+    border: 20px ridge red;
+
+}
+#div3{
+
+    background-color: darkseagreen;
+    height: 88%;
+    width: 30%;
+
+}

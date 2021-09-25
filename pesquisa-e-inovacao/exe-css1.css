@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border: 2px solid green;
+    margin-top: 100px;
+
+}
+#div2{
+
+    background-color: black;
+    height: 50vh;
+    width: 50%;
+    border: 10px dashed red;
+    margin-top: 100px;
+    margin-left: 100px;
+
+}

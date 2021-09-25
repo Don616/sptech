@@ -1,0 +1,48 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+body{
+
+    background-color: #D3D3D3;
+
+}
+
+#div1{
+
+    background-color: white;
+    height: 500px;
+    width: 50vw;
+    border: black 10px dotted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#div2{
+
+    background-color: yellow;
+    height: 50px;
+    width: 30%;
+
+}
+#div3{
+
+    background-color: rgb(170, 53, 10);
+    height: 100px;
+    width: 30%;
+
+
+}
+#div4{
+
+    background-color: rgb(2, 126, 2);
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+
+}

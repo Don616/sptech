@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 2 - Else If</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Senso de Tuvalu</h2>
+
+        <input id="input_renda" placeholder="Digite sua renda mensal">
+        <br>
+        <button onclick="verificarRenda()">Verificar Renda</button><br><br>
+        <span id="span_classe"></span>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function verificarRenda(){
+
+        var renda = Number(input_renda.value);
+        input_renda.value = ``;
+
+        if(renda <= 250){
+            span_classe.innerHTML = `Classe E (até 250)`;
+        } else if(renda <= 900){
+            span_classe.innerHTML = `Classe D (+250 até 900)`;
+        } else if(renda <= 2500){
+            span_classe.innerHTML = `Classe C (+900 até 2500)`;
+        } else if(renda <= 9500){
+            span_classe.innerHTML = `Classe B (+2500 até 9500)`;
+        } else {
+            span_classe.innerHTML = `Classe A (+9500)`;
+        }
+
+
+    }
+
+</script>
