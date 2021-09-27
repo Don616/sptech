@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Sistema de Login / Senha</h2>
+
+        <input placeholder="Digite seu login" id="input_login"><br>
+        <input placeholder="Digite sua senha" id="input_senha" type="password" onchange="liberarCodigo()">
+
+        <span id="span_codigo" style="display: none"><input placeholder="Digite o código de segurança" id="input_codigo" type="password"></span>
+        <br><br>
+        <button onclick="entrar()">Entrar</button>
+
+
+    </center>
+
+    <script src="exe9.js"></script>
+</body>
+</html>

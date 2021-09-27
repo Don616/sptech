@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+
+        <h2>Você é vegano?</h2>
+        <h6>responda honestamente</h6>
+
+        <select id="select_cafe" onchange="selectCafe()">
+            
+            <option value="">Escolha</option>
+            <option value="ovos">Ovos</option>
+            <option value="leite_de_arroz">Leite de Arroz</option>
+            <option value="bacon">Bacon</option>
+
+        </select>
+        <select id="select_almoço"  onchange="selectAlmoço()">
+            
+            <option value="">Escolha</option>
+            <option value="bife">Bife</option>
+            <option value="hamburguer_de_soja">Hamburguer de Soja</option>
+            <option value="frango_grelhado">Frango Grelhado</option>
+
+        </select>
+        <select id="select_janta" onchange="selectJanta()">
+            
+            <option value="">Escolha</option>
+            <option value="picanha_de_soja">Picanha de Soja</option>
+            <option value="cupim">Cupim</option>
+            <option value="coração">Coração</option>
+
+        </select>
+
+        <br>
+        <br>
+        <button onclick="souVegano()">Sou Vegano</button>
+
+    </center>
+    
+    <script src="exe4.js"></script>
+</body>
+</html>
