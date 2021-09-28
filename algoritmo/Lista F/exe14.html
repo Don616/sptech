@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 14 - Desafio!</title>
+</head>
+<body>
+
+    <center>
+
+        <div style="display: block;" id="div_1">
+            <h2>Verificador de Altura</h2>
+
+            
+
+            <input type="text" id="input_altura_piloto_inicial" placeholder="Altura Inicial Pilotos"><br>
+            <input type="text" id="input_altura_piloto_final" placeholder="Altura Final Pilotos"><br>
+            <button id="button_1" onclick="verificarPiloto()">Selecionar</button><br><br>
+
+            <input type="text" id="input_altura_basquete_inicial" placeholder="Altura Inicial Jogadores"><br>
+            <input type="text" id="input_altura_basquete_final" placeholder="Altura Final Jogadores"><br>
+            <button onclick="verificarBasquete()">Selecionar</button><br><br>
+
+        </div>
+
+        <div style="display: none;" id="div_2">
+
+            <h1>Processo de Seleção de novos atletas</h1>
+            <h3>Critério de Seleção de piloto – altura entre <span id="span_altura_inicial_piloto"></span> até <span id="span_altura_final_piloto"></span></h3>
+            <h3>Critério de Seleção de jogador de basquete – altura entre <span id="span_altura_inicial_basquete"></span> até <span id="span_altura_final_basquete"></span></h3>
+            <br><br>
+
+            <input id="input_nome_candidato" placeholder="Digite seu nome">
+            <input id="input_altura_candidato" placeholder="Digite sua altura"><br>
+
+            <h5>Escolha a modalidade</h5>
+
+            <select id="select_modalidade" onchange="selectModalidade()">
+
+                <option value="">Escolha</option>
+                <option value="piloto">Piloto</option>
+                <option value="basquete">Basquete</option>
+
+            </select>
+            
+            <br><br>
+            <span id="span_txt1"></span>
+
+
+        </div>
+
+        
+    </center>
+    
+    <script src="exe14.js"></script>
+</body>
+</html>
