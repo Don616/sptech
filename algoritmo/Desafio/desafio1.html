@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="./desafio1.css">
+</head>
+<body>
+    <div class="container">
+
+    <div id="div1">
+
+    <h1>Seja bem vindo ao banco KNAB</h1>
+    <h3>Simulação de emprestimos e investimentos</h3>
+
+    Entre com os dados da sua conta! <br><br>
+    <input type="text" id="input_conta" placeholder="Conta">
+    <input type="text" id="input_digito" placeholder="Dígito">
+    <input type="password" id="input_senha" placeholder="Senha"><br><br>
+    <button onclick="simular()">Simular!</button>
+
+    <br><br>
+    <button onclick="teste()">teste (tire depois)</button>
+
+    </div>
+
+    <div id="div2">
+
+        <h1>O Banco KNAB é a sua melhor opção</h1>
+        <h3>Emprestimos e investimentos com as melhores taxas do mercado</h3>
+        <h5>Entre com os dados da sua simulação</h5>
+        <span id="span1">Valor da Operação:</span>
+        <input type="text" id="input_valor_operacao" placeholder="Valor"><br><br>
+
+        <select name="" id="select1" onchange="trocaSelect1()">
+
+            <option value="">Selecione a Operação</option>
+            <option value="option_emprestimo">Empréstimo</option>
+            <option value="option_investimento">Investimento</option>
+
+
+        </select>
+        <select name="" id="select2" onchange="trocaSelect2()">
+
+            <option value="">Selecione o Prazo</option>
+            <option value="option_curto">Curto</option>
+            <option value="option_medio">Médio</option>
+            <option value="option_longo">Longo</option>
+
+
+        </select>
+
+        <br><br>
+
+        <button onclick="mostrarResultado()">Mostrar o Resultado</button>
+
+
+    </div>
+
+    </div>
+    <script src="./desafio1.js"></script>
+</body>
+</html>

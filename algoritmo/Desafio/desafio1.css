@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+.container{
+
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+#div1 button{
+
+    border-radius: 50px;
+    width: 65px;
+    height: 65px;
+    box-shadow: 3px 3px 3px black;
+    margin-top: 10px;
+    font-weight: bolder;
+    background-color: rgb(182, 180, 180);
+
+}
+#div1 h1, #div2 h1 {
+
+    margin-top: 20px;
+
+}
+
+#div1 h3, #div2 h3 {
+
+    margin-bottom: 5px;
+
+}
+#div1 {
+
+    display: block;
+
+}
+#div2 {
+
+    display: none;
+
+}
+
+
+#input_conta {
+
+    margin-top: 3px;
+
+}
