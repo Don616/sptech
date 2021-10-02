@@ -22,7 +22,7 @@
     <button onclick="simular()">Simular!</button>
 
     <br><br>
-    <button onclick="teste()">teste (tire depois)</button>
+    <!--<button onclick="teste()">teste (tire depois)</button>-->
 
     </div>
 
@@ -45,16 +45,33 @@
         <select name="" id="select2" onchange="trocaSelect2()">
 
             <option value="">Selecione o Prazo</option>
-            <option value="option_curto">Curto</option>
-            <option value="option_medio">Médio</option>
-            <option value="option_longo">Longo</option>
+            <option value="curto">Curto</option>
+            <option value="medio">Médio</option>
+            <option value="longo">Longo</option>
 
 
         </select>
 
         <br><br>
 
-        <button onclick="mostrarResultado()">Mostrar o Resultado</button>
+        <button onclick="mostrarResultado()">Mostrar o Resultado</button><br><br>
+        <button onclick="sair()">Sair</button>
+
+
+    </div>
+
+    <div id="div3">
+
+        <h2>Resultado da Simulação</h2>
+        <b>Simulação Atual</b><br>
+
+        <span id="span_simulacao_emprestimo">Simulação <span id="span_id_emprestimo"></span> – Para o empréstimo de R$<span id="span_valor_emprestimo"></span> no <span id="span_prazo_emprestimo"></span> prazo será cobrado os juros de R$<span id="span_juros_emprestimo"></span> ao ano</span><span id="span_pular1"></span><br>
+        <span id="span_simulacao_investimento">Simulação <span id="span_id_investimento"></span> – Investindo R$<span id="span_valor_investimento"></span> no <span id="span_prazo_investimento"></span> prazo o seu rendimento será de R$<span id="span_rendimento_emprestimo"></span> ao ano</span><span id="span_pular2"></span><br>
+        <div id="div4">
+        <b>Histórico de Simulações</b><br>
+        <span id="span_texto"></span><br>
+        </div>
+        <button onclick="voltar()">Voltar à Simulação</button>
 
 
     </div>

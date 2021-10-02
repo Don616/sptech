@@ -39,15 +39,24 @@ body {
     display: block;
 
 }
-#div2 {
+#div2, #div3 {
 
     display: none;
 
 }
 
 
+
 #input_conta {
 
     margin-top: 3px;
 
+}
+#span_simulacao_emprestimo, #span_simulacao_investimento{
+
+    display: none;
+
+}
+#div3 button{
+    margin-top: 10px;
 }
