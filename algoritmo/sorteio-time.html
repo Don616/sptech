@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Times</title>
+</head>
+<body>
+
+    <button onclick="aparecerImagem()">Sortear time</button><br>
+    <br>
+    <img id="escudo" src="https://montecarlonet.com.br/standard/img/produtos/zoom/88522.jpg" alt="escudo de time">
+
+    
+</body>
+</html>
+
+<script>
+
+    function aparecerImagem(){
+
+        var rand = Math.random();
+        var num = (rand * 3 + 1).toFixed(0);
+        console.log(num)
+        if(num == 1){
+            escudo.src = `https://www.imagensempng.com.br/wp-content/uploads/2021/01/Escudo-Palmeiras-Png-300x300.png`
+        } else if(num == 2){
+            escudo.src = `https://w7.pngwing.com/pngs/141/130/png-transparent-clube-de-regatas-do-flamengo-botafogo-de-futebol-e-regatas-brazil-ninho-do-urubu-copa-do-brasil-high-tech-emblem-logo-high-tech.png`
+        } else if(num == 3){
+            escudo.src = `https://www.imagensempng.com.br/wp-content/uploads/2021/01/Escudo-Santos-Png.png`
+        } else {
+            escudo.src = `https://e7.pngegg.com/pngimages/824/154/png-clipart-fluminense-fc-dream-league-soccer-football-graphics-campeonato-brasileiro-serie-a-football-emblem-logo.png`
+        }
+
+
+    }
+
+</script>
+
+<style>
+
+    img {
+
+        height: 150px;
+        width: 150px;
+
+    }
+
+</style>
