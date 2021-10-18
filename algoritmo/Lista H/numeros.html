@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numero</title>
+</head>
+<body>
+    <span id="span_num"></span>
+</body>
+</html>
+
+
+
+<script>
+    var x = 0;
+    var a = prompt("Digite um numero:",)
+    var num = Number(a);
+    var d;
+
+
+    var raiva = 0;
+    while(num > 1000){
+        if(raiva < 1){
+            alert("Cara, assim tu me mata né! Um numero menor por favor ;-;")
+            raiva++;
+        } else if(raiva < 2){
+            alert('FDP, para de me testar!')
+            raiva++;
+        } else if(raiva < 3){
+           alert('Já to ficando puto com você 😠')
+           raiva++;
+        } 
+
+        a = prompt("Digite um numero:",)
+    }
+    d = prompt("Digite um numero final",)
+    num = Number(a);
+    x = Number(d);
+
+    while(num >= x){
+        d = prompt("Cara, escreve um numero maior que o outro seu burro!",)
+        x = Number(d);
+    }   
+
+    var c = 0;
+    var validacao = confirm("Quer que pule de valor em valor? Aperte Ok para sim")
+    if(validacao){
+        c = prompt("Qual numero?",)
+    }
+    var n = Number(c);
+
+    while(num < x){
+
+        if(validacao){
+            if(num % n == 0){
+                span_num.innerHTML += `${num}<br>`; 
+            }
+        } else {
+            span_num.innerHTML += `${num}<br>`; 
+        }
+        
+
+
+        num++;
+    }
+
+</script>
