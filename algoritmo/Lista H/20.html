@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 20</title>
+</head>
+<body>
+    <button onclick="curtir()">Curto 3 e 5</button>
+    <br>
+    <span id="span_num"></span>
+</body>
+</html>
+
+<script>
+
+    function curtir(){
+
+        var i = 0;
+        while(i < 101){
+
+            if(i % 3 == 0 && i % 5 ==0){
+                span_num.innerHTML += `É TRI! É PENTA!<br>`;
+            }
+            else if(i % 3 == 0){
+                span_num.innerHTML += `É TRI!<br>`;
+            } else if(i % 5 == 0){
+                span_num.innerHTML += `É PENTA!<br>`;
+            } else {
+                span_num.innerHTML += `${i}<br>`
+            }
+
+            i++;
+        }
+
+    }
+
+</script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 22</title>
+</head>
+<body>
+    <center>
+
+        <div id="pagina1">
+
+            <input onchange="verificar1()" type="text" id="input_sorteados" placeholder="Insira um numero para sortear"><br>
+            <input onchange="verificar2()" type="text" id="input_calcular" placeholder="Insira um numero para calcular"><br>
+            <br>
+            <button onclick="sortear()">Sortear</button>
+
+
+        </div>
+        <div style="display: none" id="pagina2">
+
+            <div id="div1"><button style="margin-top: 20px" onclick="voltar()">Voltar</button></div>
+
+            
+
+        </div>
+        <br><br><br>
+        O maior número sorteado foi: <div id="div_max"></div>
+        O menor número sorteado foi<div id="div_min"></div>
+        A média de todos os números sorteados é: <div id="div_media"></div>
+
+    </center>
+</body>
+</html>
+
+<script>
+
+    var numero_sorteado, numero_calculado;
+    var chave1 = 0;
+    var chave2 = 0;
+    var num_inteiros;
+    var max, min;
+    var max = 1;
+    var min = 100;
+
+    function verificar1(){
+
+        if(input_sorteados.value > 10 && input_sorteados.value < 50){
+            numero_sorteado = Number(input_sorteados.value);
+            chave1 = 1;
+        } else {
+            alert('Deve estar entre 10 e 50')
+        }
+
+    }
+    function verificar2(){
+
+        if(input_calcular.value > 1 && input_calcular.value < 10){
+            numero_calculado = Number(input_calcular.value);
+            chave2 = 1;
+        } else {
+            alert('Deve estar entre 1 e 10')
+        }
+
+    }
+
+    function sortear(){
+
+        verificar1()
+        verificar2()
+
+        if(chave1 == true && chave2 == true){
+            pagina1.style.display = 'none';
+            pagina2.style.display = 'block';
+        }
+
+        var i = 0;
+        while(i < numero_sorteado){
+
+            num_inteiros = Number((Math.random() * 99 +1).toFixed(0));
+            
+            if(num_inteiros % numero_calculado == 0){
+                pagina2.innerHTML += `<span style="color: red;"><b>${num_inteiros}</b></span> - `;
+            } else {
+                pagina2.innerHTML += `<b>${num_inteiros}</b> - `;
+            }
+
+ 
+
+            if(num_inteiros > max){
+                max = num_inteiros;
+                
+            }
+            if(num_inteiros < min){
+                min = num_inteiros;
+                
+            }
+
+            i++;
+        }
+
+        div_max.innerHTML = `${max}`;
+        div_min.innerHTML = `${min}`;
+        div_media.innerHTML = `${(max + min)/2}`;
+
+
+    }
+    function voltar(){
+
+        pagina1.style.display = 'block';
+        pagina2.style.display = 'none';
+        chave1 = 0;
+        chave2 = 0;
+        numero_sorteado = 0;
+        numero_calculado = 0;
+        num_inteiros = 0;
+        input_sorteados.value = ``;
+        input_calcular.value = ``;
+        max = 0;
+        min = 0;
+        
+
+    }
+
+</script>

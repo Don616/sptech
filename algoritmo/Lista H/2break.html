@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe Break 2</title>
+    <style>
+        img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center id="sumir">
+    <button onclick="sorte()">Ver minha sorte</button>
+    </center>
+    
+    <br><br>
+    
+    <div id="imagem1"></div>
+    <br><br>
+    <span id="span_txt"></span><br>
+    
+</body>
+</html>
+
+<script>
+
+    var coração = {
+
+        imagem: `https://images.vexels.com/media/users/3/176067/isolated/preview/da1d4860a08963ab6946ce0e3c7a822a-coracao-plano.png`,
+        quantidade: 0,
+        mensagem: `Você tem mais sorte no amor`,
+        
+    } 
+    var carta = {
+
+        imagem: `https://images.vexels.com/media/users/3/189299/isolated/preview/35bdc522366f66f364796411f595fec1-ilustracao-de-cartas-de-poquer-quatro-ases.png`,
+        quantidade: 0,
+        mensagem: `Você tem mais sorte no jogo`,
+        
+    }
+
+    function sorte(){
+
+        var i = 21;
+        while(i > 0){
+
+            var aleatorio = (Math.random() * 1).toFixed(0);
+            
+            
+            if(aleatorio == 0){
+
+                coração.quantidade++;
+                span_txt.innerHTML = coração.mensagem;
+                imagem1.innerHTML += `<img id="imagem" src="${coração.imagem}" alt="">`;
+                
+                
+
+            } else {
+
+                carta.quantidade++;
+                span_txt.innerHTML = carta.mensagem;
+                imagem1.innerHTML += `<img id="imagem" src="${carta.imagem}" alt="">`;
+
+            }
+            
+            if(coração.quantidade == 11 || carta.quantidade == 11){
+                
+                break
+
+            }
+
+            i--;
+
+        }
+        
+
+    }
+
+</script>

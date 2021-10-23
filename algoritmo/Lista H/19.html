@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 19</title>
+</head>
+<body>
+
+    <input type="text" id="input_onibus" placeholder="Quantos ônibus precisa pegar?"><br>
+    <input type="text" id="input_trens" placeholder="Quantos trens precisa pegar?"><br>
+    <input type="text" id="input_metros" placeholder="Quantos metrô precisa pegar?"><br><br>
+    <button onclick="partiuTrajeto()">#PartiuTrajeto</button><br><br>
+    <span id="span_frase1"></span>
+    <span id="span_frase2"></span>
+    <span id="span_frase3"></span>
+    
+</body>
+</html>
+<script>
+
+    var onibus,trem,metro;
+
+    function partiuTrajeto(){
+
+        onibus = Number(input_onibus.value);
+        trem = Number(input_trens.value);
+        metro = Number(input_metros.value);
+
+        var i = 1
+        span_frase1.style.color = 'red';
+        while(i < onibus+1){
+
+            
+            console.log(i)
+            if(i == 1){
+                console.log(i)
+                span_frase1.innerHTML += `Pegando o ${i}º ônibus<br>`;
+            }else if(i == 2) {
+                console.log(i)
+                span_frase1.innerHTML += `Pegando o ${i}º ônibus, começando a cansar... <br>`;
+            } else {
+                span_frase1.innerHTML += `Pegando o ${i}º ônibus. Já cansado! <br>`;
+            }
+            
+            i++;
+            console.log(i)
+        }
+        
+            
+
+        i = 1
+        span_frase2.style.color = 'green';
+        while(i < trem+1){
+
+            
+            if(i == 1){
+                span_frase2.innerHTML += `Pegando o ${i}º trem<br>`;
+            }else if(i == 2) {
+                span_frase2.innerHTML += `Pegando o ${i}º trem, começando a cansar... <br>`;
+            } else {
+                span_frase2.innerHTML += `Pegando o ${i}º trem. Já cansado! <br>`;
+            }
+
+            i++;
+            console.log(i)
+        }
+
+        i = 1
+        span_frase3.style.color = 'blue';
+        while(i < metro+1){
+
+            
+            if(i == 1){
+                span_frase3.innerHTML += `Pegando o ${i}º metro<br>`;
+            }else if(i == 2) {
+                span_frase3.innerHTML += `Pegando o ${i}º metro, começando a cansar... <br>`;
+            } else {
+                span_frase3.innerHTML += `Pegando o ${i}º metro. Já cansado! <br>`;
+            }
+
+            i++;
+            console.log(i)
+        }
+
+        
+
+    }
+
+</script>
