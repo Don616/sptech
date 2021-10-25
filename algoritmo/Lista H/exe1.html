@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        button{
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <button id="bu" onmouseover="sairCor()" onmouseout="mudarCor()" onclick="executar()">Mais 1</button>
+</body>
+</html>
+<script>
+    var chato = "incomoda, ";
+
+    function executar(){
+
+        chato += "incomoda, ";
+        alert(chato)
+
+    }
+    function mudarCor(){
+
+        bu.style.backgroundColor = 'green'
+        bu.style.height = '500px'
+        bu.style.width = '500px'
+        bu.style.border = "5px solid red"
+        bu.style.color = "black"
+        bu.style.margin = "50px 120px 50px 120px"
+
+    }
+    function sairCor(){
+
+        bu.style.backgroundColor = 'blue'
+        bu.style.height = '300px'
+        bu.style.width = '300px'
+        bu.style.border = "1px solid black"
+        bu.style.color = "red"
+        bu.style.margin = "0 0 0 0"
+
+    }
+
+
+
+</script>
