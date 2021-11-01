@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 16 for</title>
+    <style>
+
+        img{
+            height: 10px;
+            width: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Depósitos do banco KNAB</h2>
+
+    <input type="text" id="input_depositos_quantidade" placeholder="Informe a quantidade de depositos">
+    <input type="text" id="input_depositos_valor" placeholder="Informe o valor dos depositos"><br><br>
+    <button onclick="acompanharGrana()">Acompanhar Grana</button>
+    <br><br>
+    <span id="span_saida"></span>
+</body>
+</html>
+
+<script>
+  
+    function acompanharGrana(){
+
+        
+        var deposito = {
+
+            quantidade: Number(input_depositos_quantidade.value),
+            valor: Number(input_depositos_valor.value)
+
+        }
+        var valor_inicial = deposito.valor;
+        
+        console.log(porcent)
+
+        for(var i = 1; i <= deposito.quantidade; i++){
+
+            if(i % 3 == 0){
+                var porcent = deposito.valor / 100;
+                deposito.valor += porcent;  
+                span_saida.innerHTML += `${i}º Mês: R$${(deposito.valor.toFixed(2))}<img src='https://cdn-icons-png.flaticon.com/512/148/148841.png'><br>`;
+            } else {
+                span_saida.innerHTML += `${i}º Mês: R$${deposito.valor.toFixed(2)} <br>`;
+            }
+
+           if( i < deposito.quantidade){
+                deposito.valor += valor_inicial;
+           }
+
+
+        }
+            span_saida.innerHTML += `Total Guardado: R$${deposito.valor.toFixed(2)}`
+
+    }
+
+</script>
