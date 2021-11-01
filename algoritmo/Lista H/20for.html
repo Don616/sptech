@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+    document.title = "Exe 20 For"
+
+    var botao = document.createElement('button')
+    var pula = document.createElement('br')
+    var tagSpan = document.createElement('span')
+    var carta = {
+        img: 'https://www.nicepng.com/png/detail/58-588075_playing-card-club-carta-de-baralho-grafiti.png',
+        quantidade: 0,
+    };
+    var coração = {
+        img: 'https://i.pinimg.com/originals/6a/8c/5a/6a8c5ab53b5455a50dbd570138c4614f.png',
+        quantidade: 0,
+    };
+
+    
+
+    botao.innerHTML = "Ver minha Sorte";
+    document.body.appendChild(botao)
+    document.body.appendChild(pula)
+    document.body.appendChild(tagSpan)
+
+    botao.addEventListener('click', ()=>{
+
+        
+        for(let i = 1;i<=21;i++){
+            var sorte = (Math.random()*1).toFixed(0)
+            if(sorte == 0){
+                document.write(`<img style='height: 80px; width: 80px;' src='${carta.img}'>`);
+                carta.quantidade++;
+                
+            } else {
+                document.write(`<img style='height: 80px; width: 80px;' src='${coração.img}'>`);
+                coração.quantidade++;
+                
+            }
+            
+
+        }
+
+        if(carta.quantidade > coração.quantidade){
+            document.write(`<br>Você tem mais sorte no Jogo`);
+        } else {
+            document.write(`<br>Você tem mais sorte no Amor`);
+        }
+
+    })
+
+
+</script>

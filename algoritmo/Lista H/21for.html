@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+</body>
+</html>
+<script>
+
+    document.title = "Exe 21 FOR"
+    var campo = document.createElement('span')
+    campo = document.createAttribute('id','span_campo');
+    var valor;
+
+    valor = Number(prompt("Digite um número de 0 a 100:",))
+
+    while(valor < 0 || valor > 100){
+
+        valor = Number(prompt("Amigo, eu falei de 0 a 100, entendeu?:",))
+
+    }
+
+    var sorte = (Math.random() * 100).toFixed(0)
+
+    for(let i = 1; sorte != valor; i++){
+
+        document.writeln(`${i} - Numero gerado: ${sorte}<br>`)
+        sorte = (Math.random() * 100).toFixed(0)
+
+        if(sorte == valor){
+
+            i++;
+            document.writeln(`${i} - Numero gerado: <b>${sorte}</b><br>`)
+            
+        }
+    }
+    
+</script>

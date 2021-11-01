@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 19 For</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+    var input = document.createElement('input')
+    var tagSpan = document.createElement('span')
+    var pula = document.createElement('br')
+
+    input.setAttribute('id','input_idade')
+    
+    tagSpan.setAttribute('id','span_txt')
+
+    document.body.appendChild(input)
+    document.body.appendChild(pula)
+    document.body.appendChild(tagSpan)
+
+    input.addEventListener('change', ()=>{
+        var idade = input_idade.value;
+
+        for(let i = 0;i <= idade;i++){
+            
+            if(i >= 0 && i <= 4){
+                tagSpan.innerHTML += `${i} anos (Primeira Infância)<br>`
+            } else if(i > 4 && i <= 6){
+                tagSpan.innerHTML += `${i} anos (Pré-escolar)<br>`
+            } else if(i > 6 && i <= 10){
+                tagSpan.innerHTML += `${i} anos (Segunda Infância)<br>`
+            } else if(i > 10 && i <= 18){
+                tagSpan.innerHTML += `${i} anos (Adolescência)<br>`
+            } else if(i > 18 && i <= 50){
+                tagSpan.innerHTML += `${i} anos (Adulto)<br>`
+            } else if(i > 50 && i <= 100){
+                tagSpan.innerHTML += `${i} anos (Melhor idade)<br>`
+            } else if(i > 100){
+                tagSpan.innerHTML += `${i} anos (Matusalém)<br>`
+            }
+
+        }
+    })
+</script>
