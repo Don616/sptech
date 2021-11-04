@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 500px;
+        }
+        h1{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>Digite o nome</h3>
+    <button onclick="buscaPoke()">Buscar Poke</button><br><br>
+    <img id='img_poke' src="" alt="" style='display:none'><br><br><br>
+    <h1 id="id_erro">Erro</h1>
+</body>
+</html>
+<script>
+
+    function buscaPoke(){
+
+        fetch(`https://pokeapi.co/api/v2/pokemon/${prompt('Digite o nome de um Poke',)}`)
+            .then(function(resposta){
+
+                resposta.json()
+                    .then(function(json){
+                        console.log(json);
+                        img_poke.src = json.sprites.        front_shiny;
+                        img_poke.style.display = 'block'
+                        id_erro.style.display = 'none'
+                    })
+                    .catch(function(erro){
+                        console.log(erro);
+                        img_poke.style.display = 'none'
+                        id_erro.style.display = 'block'
+                    })
+
+            })
+    }
+
+
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json VIACEP</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+   
+    
+
+    document.body.setAttribute('load',buscarDados())
+
+    function buscarDados(){
+        var _cep = prompt('Digite seu cep',)
+
+        fetch(`https://viacep.com.br/ws/${_cep}/json/`)
+            .then(function(resultado){
+                
+                resultado.json()
+                    .then(function(json){
+                        console.log(json);
+                        
+                        document.write(json.logradouro)
+                       
+                    })
+                    .catch(function(erro){
+                        console.log(erro);
+                    })
+            })
+    
+
+       
+    
+    }
+
+  
+
+</script>
