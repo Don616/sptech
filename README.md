@@ -1,6 +1,7 @@
 # Bandtec Digital School
 ### Repositório para guardar aulas da faculdade BandTec e exercícios.
 ---
+![eight of pentacles tarot](https://upload.wikimedia.org/wikipedia/en/4/49/Pents08.jpg)
 Repositórios internos:
 
 - Algoritmo; 
@@ -10,6 +11,7 @@ Repositórios internos:
 - Banco de Dados;
 
 <img height='50em' width= '50em' src='https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-and-moodle-elearningworld-5.png' alt='mysql'>
+
 - Pesquisa & Inovação; 
  
 <img height='50em' width= '50em' src='https://cdn.iconscout.com/icon/free/png-256/css3-2038878-1720091.png' alt='css3'>
