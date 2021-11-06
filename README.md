@@ -1,7 +1,6 @@
 # Bandtec Digital School
 ### Repositório para guardar aulas da faculdade BandTec e exercícios.
 ---
-![eight of pentacles tarot](https://upload.wikimedia.org/wikipedia/en/4/49/Pents08.jpg)
 
 
 Repositórios internos:
