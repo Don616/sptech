@@ -17,3 +17,5 @@ Repositórios internos:
  
 <img height='50em' width= '50em' src='https://cdn.iconscout.com/icon/free/png-256/css3-2038878-1720091.png' alt='css3'>
 
+- Projetos (projetos realizados na faculdade);
+

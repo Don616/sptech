@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.header .titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    
+}
+
+.header{
+   text-align: center;
+}
+.imagem_logo{
+    z-index: 3;
+    margin-left: 400px;
+    margin-inline-end: 230px;
+    margin-top: 250px;
+    width: 12px;
+}
+
+.img {
+    width: 150px;
+}
+
+.container {
+    width: 40vw;
+    height: 80vh;
+    background-color: grey;
+    border: black solid;
+    display: grid;
+    grid-template-columns:30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    position: absolute;
+}
+
+.container div {
+    background-color: white;
+    padding: 20px;
+   /* border: black solid 1px;*/
+}
+
+div .letra {
+    font-size: 25px;
+    border: black solid 1px;
+}
+
+div .inutil {
+    background-color: grey;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+.letra {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    text-transform: uppercase;
+}
+
+.box_pergunta{
+
+    height: 438px;
+    width: 45%;
+    border: 3px solid #000000;
+    padding: 50px;
+    margin-bottom: 50px;
+   /*margin-bottom: 30px;
+    margin-left: -15px;
+    border: black solid 2px;
+    margin-right: 30px;
+    width: 45%;
+    padding: 25px;*/
+    flex-wrap: wrap;
+
+    background-color: rgb(194, 193, 193);
+    justify-content: space-evenly;
+    overflow-y: scroll; /* barra de rolagem na div */
+}
+
+li{
+
+    text-align: center;
+    height: 100px;
+    list-style-type: decimal;
+    color: red;
+    font-size: bold;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 0px;
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    
+    background-color: yellow;
+}
+li button {
+    margin-top: 15px;
+   
+}
+button:hover {
+    border: 1px solid #000000
+}
+
+.creditos{
+    text-align: center;
+    margin-right: 10px;
+    color: black;
+}
+
+li div {
+    color: black;
+}
+.tela {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+
+
