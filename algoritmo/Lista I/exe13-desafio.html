@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 13 (DESAFIO)</title>
+</head>
+<body>
+
+    <center>
+
+        <h1>Cadastro Times de Futebol</h1>
+
+        <select name="" id="select_resultado" onchange="trocaResultado()">
+            <option value="">Indique o Resultado</option>
+            <option value="vitoria">Vitória</option>
+            <option value="empate">Empate</option>
+            <option value="derrota">Derrota</option>
+        </select>
+        <br>
+        <button onclick="registrarJogo()">Registrar Jogo</button><br><br>
+
+        <div style="display:none" id="exibe_texto">
+            <p>O time teve: <span id="span_vitorias"></span> vitórias, <span id="span_empates"></span> empates, <span id="span_derrotas"></span> derrotas.</p>
+            <p>Pontuação Total: <span id="span_pontos"></span> pontos.</p>
+            <p>Aproveitamento: <span id="span_aproveitamento"></span>%</p>
+        </div>
+        <br><br>
+        <input onchange="querSaber()" style="width: 230px;" type="text" id="input_quer_saber" placeholder="Indique qual jogo quer saber resultado">
+        <p style="display: none" id="p_txt">No <span id="span_numero_jogo"></span>º jogo, o time obteve <span id="span_status"></span>.</p>
+    </center>
+
+    <script src="exe13-desafio.js"></script>
+</body>
+</html>
