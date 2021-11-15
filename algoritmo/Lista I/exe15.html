@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exe 15</title>
+</head>
+<body>
+
+    <center>
+        <h1>Cadastro de Produtos</h1>
+
+        <input type="text" id="input_produto" placeholder="Nome do Produto"><br>
+        <input type="text" id="input_preço" placeholder="Preço do Produto"><br>
+        <br><br>
+        <button onclick="cadastrar()">Cadastrar</button><br>
+        <button onclick="relatorioEstoque()">Relatório de Estoque</button>
+
+        <div id="estoque" style="display: none">
+
+            <p>Total de Produtos: <span id="span_total"></span></p><br>
+            <span id="span_relatorio"></span>
+
+
+            <p>Nome do Produto mais caro: <span id="span_produto_caro"></span></p><br>
+            <p>Nome do Produto mais barato: <span id="span_produto_barato"></span></p><br>
+            <p>Soma dos preços de compra dos produtos: <span id="span_produto_soma"></span></p><br>
+            <p>Média de preço de venda dos produtos: <span id="span_produto_media"></span></p><br>
+        </div>
+
+    </center>
+
+    <script src="exe15.js"></script>
+</body>
+</html>
