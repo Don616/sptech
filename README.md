@@ -19,3 +19,5 @@ Repositórios internos:
 
 - Projetos (projetos realizados na faculdade);
 
+- Sistemas Operacionais;
+
