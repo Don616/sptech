@@ -1,0 +1,17 @@
+# Atividade 1
+
+> 1.1 Quais dos nomes anteriores que estão em vermelho são Sistemas Operacionais nativos ou distribuições? E cite algumas características.
+
+- MacOS é nativo para computadores da Apple, assim como iOS para celulares da Apple também. Windows em geral são para PC, e distribuições Linux, como Arch, Manjaro, Mint, Ubuntu e outros são capazes de funcioar em diversos computadores, não sendo nativos de nenhum em específico.
+
+> 1.2 Reposta estruturada: Acessar as sugestões a seguir via links da internet e fazer um resumo em relação aos tipos de licenças. 
+
+
+- Licença por volume (ou contrato OPEN) da Microsoft é voltada para o público empresarial, enquanto as demais, ESD, FPP e OEM são voltadas para o mercado doméstico.
+Licenças OEM são adquiridas quando o cliente compra o aparelho. O windows que vem no aparelho contém esta licença.
+Licenças FPP são compradas através de mídia física ou digital para serem instaladas pelo cliente.
+A vantagem de uma licença de contrato OPEN para a empresa cliente é que só é disponibilizado apenas uma chave de ativação por produto, assim torna mais prático o gerenciamento de licenças na empresa.
+Também torna mais fácil a regularização de produtos pirata. 
+Produtos para escolas e faculdades entram na modalidade ACADEMY e para governos a modalidade GOVERNMENT, ambas contém desconto para o cliente.
+
+Distribuições GNU/Linux contém a licença livre, que basicamente garante que todos os software do sistema operacional são livres, de código aberto.
