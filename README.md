@@ -1,8 +1,8 @@
 # SPTech - São Paulo Tech School
-### Repositório para guardar aulas da faculdade BandTec e exercícios.
+
 ---
-
-
+### Repositório para guardar aulas da faculdade SPTech e exercícios.
+---
 Disciplinas:
 
 - Algoritmo:
