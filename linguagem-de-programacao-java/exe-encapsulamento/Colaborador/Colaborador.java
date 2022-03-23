@@ -53,5 +53,10 @@ public class Colaborador{
         this.salario = salario;
     }
 
+    @Override
+    public String toString() {
+        
+        return "\nNome do colaborador: " + this.getNome() + "\nCargo do Colaborador: " + this.getCargo() + "\nSalario do Colaborador: " + this.getSalario();
+    }
 
 }
