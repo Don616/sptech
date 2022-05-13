@@ -1,0 +1,169 @@
+-------------------------------------------------------------------------------
+Test set: com.bandtec.projeto.lista.desafio.ListaUtilTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 20, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec <<< FAILURE!
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue()  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue(ListaUtilTest.java:208)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComValorPositivosENegativosAumentaTamanhoDaLista()  Time elapsed: 0.017 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComValorPositivosENegativosAumentaTamanhoDaLista(ListaUtilTest.java:17)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:37)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento10DiminuiTamanhoDaLista()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento10DiminuiTamanhoDaLista(ListaUtilTest.java:49)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento101NaoDiminuiTamanhoDaLista()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testRemoveQuandoAcionadoComArgumento101NaoDiminuiTamanhoDaLista(ListaUtilTest.java:61)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaPossui3IndicesPreenchidosRetorna3()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaPossui3IndicesPreenchidosRetorna3(ListaUtilTest.java:82)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaPossui6ParesRetorna6()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <6> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaPossui6ParesRetorna6(ListaUtilTest.java:99)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaEstaVaziaRetorna0()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountParesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:107)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaEstaVaziaRetorna0()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:115)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaPossui3ImparesRetorna3()  Time elapsed: 0.005 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <3> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountImparesQuandoAcionadoEListaPossui3ImparesRetorna3(ListaUtilTest.java:128)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar42()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoDeveRetornar42(ListaUtilTest.java:139)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoEListaEstavaziaDeveRetornar0()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testSomarQuandoAcionadoEListaEstavaziaDeveRetornar0(ListaUtilTest.java:147)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoEListaEstaVaziaDeveRetornar0()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:155)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoDeveRetornar42()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <42> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMaiorQuandoAcionadoDeveRetornar42(ListaUtilTest.java:168)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoEListaEstaVaziaDeveRetornar0()  Time elapsed: 0.002 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoEListaEstaVaziaDeveRetornar0(ListaUtilTest.java:176)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoDeveRetornar10Negativo()  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-10> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testGetMenorQuandoAcionadoDeveRetornar10Negativo(ListaUtilTest.java:192)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse(ListaUtilTest.java:223)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaEstaVaziaDeveRetornarFalse()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaEstaVaziaDeveRetornarFalse(ListaUtilTest.java:230)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testAddQuandoAcionadoComArgumentoNuloNaoAlteraTamanhoDaLista(ListaUtilTest.java:27)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaEstaVaziaRetorna0()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:534)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testCountQuandoAcionadoEListaEstaVaziaRetorna0(ListaUtilTest.java:71)
+
