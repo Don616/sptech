@@ -91,7 +91,7 @@ clonar_github(){
 	echo "\n\n=================================================="
 	echo "Baixa o .jar"
 	echo "==================================================\n\n"
-	wget -O TotemSystemGUI.jar https://github.com/leticia-NCosta/TotemSystem/raw/main/Script_Automacao/java/TotemSystemGUI.jar 
+	wget -O TotemSystemGUI.jar https://github.com/Don616/sptech/raw/main/Script_Automacao/java/TotemSystemGUI.jar 
 	chmod 777 TotemSystemGUI.jar
 	echo "\n\n=================================================="
 	echo "Criando uma pasta para o projeto..."
@@ -151,11 +151,11 @@ baixar_scripts(){
 	mkdir mysql
 	mkdir java
 	#wget -O docker-compose.yml https://github.com/leticia-NCosta/TotemSystem/raw/main/Script_Automacao/docker-compose.yml
-	wget -O Dockerfile https://raw.githubusercontent.com/leticia-NCosta/TotemSystem/main/Script_Automacao/java/Dockerfile
+	wget -O Dockerfile https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/java/Dockerfile
 	mv ./Dockerfile ./java/Dockerfile
-	wget -O Dockerfile https://raw.githubusercontent.com/leticia-NCosta/TotemSystem/main/Script_Automacao/mysql/Dockerfile
+	wget -O Dockerfile https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/mysql/Dockerfile
 	mv ./Dockerfile ./mysql/Dockerfile
-	wget -O sql.sql https://raw.githubusercontent.com/leticia-NCosta/TotemSystem/main/Script_Automacao/mysql/sql.sql
+	wget -O sql.sql https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/mysql/sql.sql
 	mv ./sql.sql ./mysql/sql.sql
 	mv ./TotemSystemCLI.jar ./java/TotemSystemCLI.jar
 	
