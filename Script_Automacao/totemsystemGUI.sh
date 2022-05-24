@@ -139,11 +139,10 @@ main(){
 	clear
 	instalar_docker
 	clear
-	su urubu100
 	echo "\n\n=================================================="
 	echo "Tudo certo. Entre pelo RDP"
 	echo "==================================================\n\n"
-	
+	su urubu100
 }
 
 baixar_scripts(){
