@@ -127,6 +127,7 @@ instalar_docker(){
 	echo "Rodando java no Docker"
 	echo "==================================================\n\n"
 	sudo docker build -t java-image ./java/.
+	sudo docker start mysql-totem
 	sudo docker run -it --name java-totem --link mysql-totem --net=totem-net java-image                                                           
 
 }

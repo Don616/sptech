@@ -142,6 +142,7 @@ main(){
 	echo "\n\n=================================================="
 	echo "Tudo certo. Entre pelo RDP"
 	echo "==================================================\n\n"
+	sudo docker start mysql-totem
 	su urubu100
 }
 
