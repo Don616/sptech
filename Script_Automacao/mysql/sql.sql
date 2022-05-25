@@ -97,6 +97,6 @@ insert into tb_estacao(fk_empresa, nome_estacao) values
 (1,"Consolacao"),
 (1,"Paulista");
 
-insert into tb_totem(fk_estacao,hostname) values
-(2,"VERINBK000062");
+--insert into tb_totem(fk_estacao,hostname) values
+--(2,"VERINBK000062");
 

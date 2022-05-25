@@ -116,7 +116,7 @@ instalar_docker(){
 	echo "Rodando mysql no Docker"
 	echo "==================================================\n\n"
 	sudo docker build -t mysql-image ./mysql/.
-	sudo docker run -d --name mysql-totem -p 3306:3306 --net=totem-net mysql-image
+	sudo docker run -d --name mysql-totem -p 3306:3306 mysql-image
 	#echo "\n\n=================================================="
 	#echo "Rodando java no Docker"
 	#echo "==================================================\n\n"
