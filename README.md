@@ -19,6 +19,7 @@ Disciplinas:
 - Sistemas Operacionais:
 	- Shellscript;
 	- Poweshell;
+	- Docker;
 
 - Linguagem de Programação:
 	- Java;
