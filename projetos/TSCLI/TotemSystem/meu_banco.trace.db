@@ -1,0 +1,15 @@
+2022-04-19 20:50:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" already exists; SQL statement:
+CREATE TABLE Usuario(id INT PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(255),email VARCHAR(255),senha VARCHAR(15),); [42101-199]
+2022-04-19 20:50:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" already exists; SQL statement:
+CREATE TABLE Usuario(id INT PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(255),email VARCHAR(255),senha VARCHAR(15),); [42101-199]
+2022-04-19 20:51:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" already exists; SQL statement:
+CREATE TABLE Usuario(id INT PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(255),email VARCHAR(255),senha VARCHAR(15),); [42101-199]
+2022-04-19 20:52:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" already exists; SQL statement:
+CREATE TABLE Usuario(id INT PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(255),email VARCHAR(255),senha VARCHAR(15),); [42101-199]
+2022-04-19 21:00:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT EMAIL FROM USUARIO WHERE EMAIL = EMAIL@[*]EMAIL.COM "; SQL statement:
+select email from Usuario where email = email@email.com [42000-199]

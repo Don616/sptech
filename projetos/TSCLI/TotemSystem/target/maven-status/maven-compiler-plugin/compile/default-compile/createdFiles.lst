@@ -1,0 +1,12 @@
+br\com\sptech\totemsistem\Flags.class
+br\com\sptech\totemsistem\Info.class
+br\com\sptech\totemsistem\Slack.class
+br\com\sptech\totemsistem\Teste.class
+br\com\sptech\totemsistem\Usuario.class
+br\com\sptech\totemsistem\Sistema.class
+br\com\sptech\totemsistem\ValidacaoLogin.class
+br\com\sptech\totemsistem\Totem.class
+br\com\sptech\totemsistem\BancoDeDados.class
+br\com\sptech\totemsistem\Connection.class
+br\com\sptech\totemsistem\Main.class
+br\com\sptech\totemsistem\SalvarDados.class
