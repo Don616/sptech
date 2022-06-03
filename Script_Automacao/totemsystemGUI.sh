@@ -142,9 +142,6 @@ main(){
 	echo "\n\n=================================================="
 	echo "Tudo certo. Entre pelo RDP"
 	echo "==================================================\n\n"
-	xauth add $(xauth -f /home/urubu100/.Xauthority list|tail -l)
-	export DISPLAY=:0.0
-	sudo docker start mysql-totem
 	su urubu100
 	
 }
@@ -161,8 +158,8 @@ baixar_scripts(){
 	wget -O sql.sql https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/mysql/sql.sql
 	mv ./sql.sql ./mysql/sql.sql
 	mv ./TotemSystemCLI.jar ./java/TotemSystemCLI.jar
-	
-
+	wget -O executar.sh https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/executar.sh
+	chmod +x executar.sh
 }
 
 #-EXECUÇÃO-------------------------------------------------------------------------#
