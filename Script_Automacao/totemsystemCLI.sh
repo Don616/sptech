@@ -129,7 +129,7 @@ instalar_docker(){
 	sudo docker build -t java-image ./java/.
 	sudo docker start mysql-totem
 	sudo docker run -it --name java-totem --link mysql-totem --net=totem-net java-image                                                           
-	sudo docker run -it --link mysql-totem --net=totem-net java-image
+	
 }
 
 main(){
@@ -159,8 +159,8 @@ baixar_scripts(){
 	wget -O sql.sql https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/mysql/sql.sql
 	mv ./sql.sql ./mysql/sql.sql
 	mv ./TotemSystemCLI.jar ./java/TotemSystemCLI.jar
-	
-
+	wget -O novocontainer.sh https://raw.githubusercontent.com/Don616/sptech/main/Script_Automacao/novocontainer.sh
+	chmod +x novocontainer.sh
 }
 
 #-EXECUÇÃO-------------------------------------------------------------------------#

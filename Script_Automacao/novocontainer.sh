@@ -1,0 +1,1 @@
+sudo docker run -it --link mysql-totem --net=totem-net java-image

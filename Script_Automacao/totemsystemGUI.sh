@@ -142,8 +142,11 @@ main(){
 	echo "\n\n=================================================="
 	echo "Tudo certo. Entre pelo RDP"
 	echo "==================================================\n\n"
+	xauth add $(xauth -f /home/urubu100/.Xauthority list|tail -l)
+	export DISPLAY=:0.0
 	sudo docker start mysql-totem
 	su urubu100
+	
 }
 
 baixar_scripts(){
