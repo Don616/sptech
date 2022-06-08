@@ -1,0 +1,189 @@
+CREATE DATABASE totemsystem;
+
+-- drop database totemsystem;
+
+use totemsystem;
+
+create table tb_empresa(
+id_empresa int primary key AUTO_INCREMENT,
+cnpj varchar(45),
+razao_social varchar(45),
+rua_empresa varchar(45),
+numero_empresa varchar(45),
+complemento_empresa varchar(45),
+telefone_empresa varchar(45),
+email_empresa varchar(45),
+senha_empresa varchar(45));
+
+create table tb_estacao(
+id_estacao int PRIMARY KEY AUTO_INCREMENT,
+fk_empresa int,
+nome_estacao varchar(45),
+linha_estacao varchar(45),
+bairro_estacao varchar(45),
+latitude_estacao varchar(45),
+longitude_estacao varchar(45),
+FOREIGN KEY(fk_empresa) REFERENCES tb_empresa(id_empresa));
+
+create table tb_usuario(
+id_usuario int primary key AUTO_INCREMENT,
+fk_empresa int,
+nome varchar(45),
+cpf varchar(45),
+cargo varchar(45),
+email varchar(45),
+senha varchar(45),
+telefone varchar(45),
+FOREIGN KEY(fk_empresa) REFERENCES tb_empresa(id_empresa));
+
+create table tb_totem(
+hostname varchar(45) primary key,
+fk_estacao int,
+data_implementacao varchar(45),
+modelo varchar(45),
+marca varchar(45),
+data_fabricacao varchar(45),
+sistema_operacional varchar(45),
+fabricante_sistema varchar(45),
+arquitetura int,
+inicializado_em varchar(45),
+permissoes varchar(45),
+marca_processador varchar(45),
+fabricante_processador varchar(45),
+micro_arquitetura varchar(45),
+cpus_fisicas bigint,
+cpus_logicas bigint,
+pacotes_fisicos int,
+frequencia bigint,
+data_atual varchar(45),
+FOREIGN KEY(fk_estacao) REFERENCES tb_estacao(id_estacao));
+
+create table tb_log(
+id_log int primary key AUTO_INCREMENT,
+fk_hostname varchar(45),
+memoria_uso bigint,
+memoria_disponivel bigint,
+total_processos int,
+total_threads int,
+total_servicos int,
+total_servicos_ativos int,
+total_servicos_inativos int,
+volume_total bigint,
+volume_disponivel bigint,
+volume_em_uso bigint,
+data_atual varchar(45),
+FOREIGN KEY(fk_hostname) REFERENCES tb_totem(hostname));
+
+create table tb_manutencao_totem(
+id_manutencao_totem int primary key AUTO_INCREMENT,
+fk_usuario int,
+fk_hostname varchar(45),
+data_manutencao varchar(45),
+descricao_manutencao varchar(255),
+FOREIGN KEY(fk_usuario) REFERENCES tb_usuario(id_usuario),
+FOREIGN KEY(fk_hostname) REFERENCES tb_totem(hostname));
+
+create table tb_alerta(
+id_alerta int primary key AUTO_INCREMENT,
+fk_hostname varchar(45),
+item varchar(45),
+alerta varchar(45), 
+check(alerta = "VERMELHO" or alerta = "AMARELO" or alerta = "VERDE"),
+situacao varchar(45),
+check(situacao = "PENDENTE" or situacao = "ANDAMENTO" or situacao = "RESOLVIDO"),
+data_atual varchar(45),
+FOREIGN KEY(fk_hostname) REFERENCES tb_totem(hostname));
+
+
+INSERT INTO tb_alerta (fk_hostname,item,alerta,situacao) values
+("VERINBK000062","RAM","VERMELHO","ANDAMENTO"),
+("VERINBK000062","VOLUME","VERDE",null),
+("VERINBK000062","PROCESSOS","AMARELO","RESOLVIDO");
+
+select * from tb_alerta ;
+
+select fk_hostname,item from tb_alerta where alerta = "VERMELHO" and situacao = "ANDAMENTO";
+select fk_hostname,item from tb_alerta where alerta = "AMARELO" and situacao = "ANDAMENTO";
+
+
+insert into tb_empresa (razao_social, email_empresa, senha_empresa) values
+("Empresa Teste LTDA","teste@teste.com","12345678");
+
+insert into tb_usuario (fk_empresa,nome,email,senha) values
+(1,"Don","don@email.com","12345678");
+
+insert into tb_usuario (fk_empresa,nome,email,senha) values
+(1,"adm",'adm@adm.com',"12345678");
+
+insert into tb_estacao(fk_empresa, nome_estacao) values
+(1,"Liberdade"),
+(1,"Consolacao"),
+(1,"Paulista");
+
+insert into tb_totem(fk_estacao,hostname) values
+(2,"VERINBK000062");
+
+select * from tb_totem;
+
+
+-- FAZER UMA LÓGICA PARA EVITAR QUE UM HOSTNAME SEJA COLOCADO EM OUTRO TOTEM DIFERENTE
+select * from tb_usuario;
+select * from tb_empresa;
+-- Pegar id da empresa através do email:
+select id_empresa from tb_empresa where email_empresa = "teste@teste.com";
+
+-- Pegar quais estações uma empresa tem:
+select nome_estacao from tb_estacao where fk_empresa = 1;
+
+-- Pegar quantas estações uma empresa tem:
+select count(nome_estacao) from tb_estacao where fk_empresa = 1;
+
+-- Pegar os hostnames de uma estação:
+select tb_totem.hostname from tb_totem join tb_estacao where tb_estacao.nome_estacao = "Liberdade"; 
+
+-- Contar quantos totens (hostname) a estação tem:
+select count(hostname) from tb_totem where fk_estacao = 2; 
+
+-- Pegar o id da estação do totem (hostname):
+select fk_estacao from tb_totem where hostname = "don-pc" limit 1;
+
+select * from tb_totem;	
+
+select hostname from tb_totem where hostname = "don-pc" limit 1;
+
+-- Pegar dados de maquina:
+select memoria_uso from tb_log where fk_hostname = "evy-pc";
+
+select * from tb_totem;
+
+select * from tb_log LIMIT 0, 2000;
+
+select * from tb_log;
+
+select * from tb_log where fk_hostname = 'VERINBK000062';
+
+update tb_totem set fk_estacao = 1 where hostname = 'VERINBK000062';
+
+select 
+tb_totem.hostname,tb_estacao.nome_estacao,
+tb_log.memoria_uso,tb_log.memoria_disponivel,tb_log.total_processos,tb_log.volume_disponivel,
+tb_log.volume_total,tb_log.volume_em_uso,tb_log.total_servicos,tb_log.total_servicos_ativos,
+tb_log.total_servicos_inativos
+from tb_totem
+join tb_log
+join tb_estacao
+where tb_totem.hostname = "VERINBK000062";
+
+select tb_empresa.razao_social,tb_empresa.email_empresa,tb_empresa.senha_empresa,
+tb_totem.hostname,tb_estacao.nome_estacao,tb_log.memoria_uso,tb_log.volume_total,
+tb_log.total_servicos
+from tb_empresa
+join tb_totem
+join tb_log
+join tb_estacao;
+
+select nome_estacao from tb_estacao where nome_estacao = "Liberdade";
+
+select id_estacao from tb_estacao where nome_estacao = "Consolação" LIMIT 1;
+use totemsystem;
+select * from tb_log LIMIT 2000;

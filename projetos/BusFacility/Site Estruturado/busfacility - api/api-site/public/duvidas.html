@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/inicial.css">
+    <link rel="stylesheet" href="./style/duvidas.css">
+    <title>Duvidas Frequentes</title>
+</head>
+
+<body>
+
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html"><i class="fas fa-user-plus"></i>Cadastro</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+    <nav id="header2">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./calculadora_index.html"><i class="fas fa-calculator"></i>Calculadora</a></ul>
+            <ul><a class="aba_nav" href="./simulador_bus.html"><i class="fas fa-bus"></i>Simulador</a></ul>
+            <ul><a class="aba_nav" href="./login.html"><i class="fas fa-user-circle"></i>Olá, <span id="usuario"></span></a></ul>
+        </div>
+
+    </nav>
+
+    <div class="banner">
+        <h2 class="hrd">Mais Sobre:</h2>
+
+        <button class="pergunta" onclick="pergunta1()">O que é a BusFacility?</button>
+        <span class="resposta" id="resposta1">
+            <p>Uma empresa que busca através da tecnologia, melhorar o transporte público.</p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta2()">Como posso fazer uma reclamação/sugestão?</button>
+        <span class="resposta" id="resposta2">
+            <p>Enviando um e-mail para BusFacility@BusFacility.com.br</a>
+            </p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta3()">A Busfacility respeita as normas e leis de privacidade?</button>
+        <span class="resposta" id="resposta3">
+            <p>A Lei 12.587/12, conhecida como Lei da Mobilidade Urbana, determina aos municípios a tarefa de planejar e
+                executar a política de mobilidade urbana. ... A Lei determina que estes planos priorizem o modo de
+                transporte não motorizado e os serviços de transporte público coletivo. 
+                A LGPD é a Lei Geral de Proteção de Dados Pessoais do Brasil. Aprovada pela Autoridade Nacional de
+                Proteção de Dados (ANPD), ela está em vigência desde 16 de agosto de 2020. É muito similar ao RGPD da
+                Europa e possui 65 artigos que regulamentam o uso e o processamento de dados pessoais. 
+            <h6>*Lei Geral de Proteção de Dados Pessoais (LGPD)</h6>
+            </p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta4()">O que vocês fazem com as informações captadas pelos sensores?</button>
+        <span class="resposta" id="resposta4">
+            <p>Os dados são armazenados em um banco de dados e tratados; isto é: serão refinados de forma a ajudar a
+                melhorar o desempenho das empresas de ônibus e proporcionar um melhor conforto ao usuário final do
+                mesmo. Através de um portal de consultas online ou do uso de totens e aplicativos de celular, é possível
+                visualizar os dados dos sensores de forma gráfica, dinâmica e intuitiva.</p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta5()">Como funciona a metodologia de vocês?</button>
+        <span class="resposta" id="resposta5">
+            <p>Disponibilizamos um serviço de contagem em tempo real no interior de veículos de transporte urbano -
+                ônibus. Instalando sensores em pontos estratégicos no interior do veículo, como catrata, portas, e
+                corredores e transmitindo estes dados em tempo real para os servidores da BusFacility, onde serão
+                armazenados em banco de dados e tratados; isto é: serão refinados de forma a ajudar a melhorar o
+                desempenho das empresas de ônibus e proporcionar um melhor conforto ao usuário final do mesmo. Através
+                de um portal de consultas online ou do uso de totens e aplicativos de celular, será possível visualizar
+                os dados dos sensores de forma gráfica, dinâmica e intuitiva, levando tanto o cliente a uma compreensão
+                clara da situação atual de sua frota de ônibus quanto a uma confiança melhor do usuário final com o
+                serviço de transporte prestado. Uma vez que o usuário retome sua confiança com o serviço de ônibus, um
+                lucro base constante poderá ser observado, uma vez que eventuais efemérides sejam previstas e superadas.
+            </p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta6()">Qual a diferença entre um ônibus com seus serviços e um ônibus comum?</button>
+        <span class="resposta" id="resposta6">
+            <p>Os ônibus integrados com a tecnologia Busfacility proporciona uma experiência diferente de convencional.
+                Oferecendo para o usuário comum um totem de consulta nos principais terminais da cidade e em pontos de
+                ônibus estratégicos onde será mostrado o tempo de demora do ônibus de alguma rota, quantas pessoas já se
+                encontram em seu interior - demonstrando ainda se há assentos vagos para sentar, ou para idosos e
+                gestantes - e ainda fazer uso de aplicativo celular para consultas mais específicas, planejar rotas com
+                antecedência e até consultar a situação atual de algum ônibus em eventos especiais - shows, feriados,
+                chuvas fortes, etc.</p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta7()">Como posso entrar em contato com a empresa?</button>
+        <span class="resposta" id="resposta7">
+            <p>Através do nosso e-mail: support@busfacility.zendesk.com</p>
+            </p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta8()">Onde posso acompanhar o rastreamento dos veículos?</button>
+        <span class="resposta" id="resposta8">
+            <p>No site <a href="./pagina_inicial.html">Busfacility.com.br</a></p>
+        </span>
+
+        <button class="pergunta" onclick="pergunta9()">Como essas informações são uteis para mim?</button>
+        <span class="resposta" id="resposta9">
+            <p>Através de nosso projeto, é possível saber com exatidão quantas pessoas estão fazendo uso do transporte
+                em tempo real. É possível saber ainda quantas pessoas entraram no veículo e quantas sairam, e através
+                destes dados informar ao cliente - as empresas de ônibus - dados mais realistas e precisos de como está
+                sendo executado seu serviço na cidade, dando a possibilidade de atencipar eventuais soluções para
+                possíveis problemas - como disponibilizar mais veículos em rotas onde os sensores já demonstram uma
+                possível alta de lotação, por exemplo. </p>
+        </span>
+    </div>
+
+    <footer id="footer">
+
+        <ul><a class="aba_fot" href="./politicas.html"><i class="far fa-file-pdf"></i>Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html"><i class="far fa-file-alt"></i>Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html"><i class="far fa-question-circle"></i>Dúvidas Frequentes</a></ul>
+
+    </footer>
+
+    <script type="text/javascript" src="./js/duvidas.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>

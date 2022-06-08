@@ -1,0 +1,97 @@
+body {
+    overflow-y: hidden;
+}
+
+.container_login { 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 81%;
+    
+}
+
+.div_primaria {
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
+
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 8px grey;
+}
+
+#img_logo_box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.titulo {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.texto {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.input_login {
+    width: 50%;
+    height: 80%;
+    padding: 8px 20px;
+    margin: 8px auto;
+    border-radius: 6px;
+    border-width: 2px;
+    display: flex;
+    border: 1px solid;
+}
+
+.div_secundaria .input_login {
+        margin-left: 30px;
+        display: unset;
+}
+
+.div_secundaria .img_olho {
+    width: 25px;
+    cursor: pointer;
+    display: unset;
+
+}
+
+.botao_entrar {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: #E57019;
+    color: white;
+    margin: 15px 10% 20px 10%;
+    padding: 5px 50px 5px 50px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.botao_entrar:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#clique_aqui {
+    color: rgba(0, 0, 255, 0.672);
+}
+
+.botao_entrar {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

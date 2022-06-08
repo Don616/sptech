@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+
+    <link rel="stylesheet" href="./style/inicial.css">
+    <link rel="stylesheet" href="./style/login.css">
+    
+    <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
+    <script src="./js/funcoes.js"></script>
+    <script src="./js/login.js"></script>
+
+    <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
+    
+    
+
+</head>
+<body>
+    
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html"><i class="fas fa-user-plus"></i></i>Cadastro</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+    <nav id="header2">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./calculadora_index.html"><i class="fas fa-calculator"></i>Calculadora</a></ul>
+            <ul><a class="aba_nav" href="./simulador_bus.html"><i class="fas fa-bus"></i>Simulador</a></ul>
+            <ul><a class="aba_nav" href="./login.html"><i class="fas fa-user-circle"></i>Olá, <span id="usuario"></span></a></ul>
+        </div>
+
+    </nav>
+
+    <div class="container_login">
+
+        <div class="div_primaria">
+            <img id="img_logo_box" src="./style/src/logo.jpg" alt="">
+            <h2 class="titulo"> Conecte-se! </h2>
+
+                <input id="email_input" class="input_login" type="text" placeholder="Email ou usuario">
+
+            <div class="div_secundaria">
+
+                <input id="input_senha_3" class="input_login" type="password" placeholder="Senha">
+                        <img id="imagem_olho" onclick="mostrarSenha()" class="img_olho" src="./style/src/invisivel_senha.png" alt="">
+            
+            </div>
+                <a class="texto" href="./trocar_senha.html"><p class="esqueci_senha">Esqueci minha senha </p></a>
+
+                <p class="texto">Não tem uma conta? <a href="./cadastro.html"> <span id="clique_aqui">Clique aqui.</span></a></p>
+                <button type="button" onclick="entrarlogin()" class="botao_entrar"> Entrar </button>
+        </div>
+
+    </div>
+    
+    <footer id="footer">
+
+        <ul><a class="aba_fot" href="./politicas.html"><i class="far fa-file-pdf"></i>Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html"><i class="far fa-file-alt"></i>Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html"><i class="far fa-question-circle"></i>Dúvidas Frequentes</a></ul>
+
+    </footer>
+   
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User | Totem System</title>
+    <link rel="shortcut icon" href="./assests/IconTotemSystem-Circulo.png"/>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/sobrenos.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link rel="stylesheet" href="./css/servicos.css">
+    <link rel="stylesheet" href="./css/entrar.css">
+    <link rel="stylesheet" href="./css/user.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+
+    <div class="cabeca">
+
+        <div class="logo">
+           <a href="./user.html"> <img src="./assests/IconTotemSystem-Circulo.png" alt="logo"> </a>
+            
+        </div>
+        <div class="links">
+            <h1 id="nome_titulo">Bem vindo</h1>
+        </div>
+
+    </div>
+
+    <div id="pag1" class="corpo">
+
+        <div class="sidebar">
+
+            <div onclick="mvDashboard()" class="titulo_sidebar">Dashboard</div>
+            <div class="titulo_sidebar">Minha Conta</div>
+            <div class="titulo_sidebar">Totens</div>
+            <div class="titulo_sidebar">Colaboradores</div>
+            <div class="titulo_sidebar">Estações</div>
+            <!-- <div class="titulo_sidebar">Mapa</div> -->
+            <div class="titulo_sidebar" onclick="sair()">Sair</div>
+            <div id="corpo_sidebarID" class="corpo_sidebar"></div>
+
+        </div>
+
+        <div class="tela">
+
+            <!-- <img src="./assests/IconTotemSystem-Circulo.png" alt="logo"> -->
+            <div id="tela_conta" class="telas">
+                <div class="container">
+                    <div class="titulo"><h1>Meus Dados</h1></div>
+                    <div class="descricao"><p>Seus dados cadastrais voce pode ver aqui, alem de poder atualiza-los</p></div>
+                    <div class="dados">
+                       <p> CNPJ:<span id="bd_cnpj"></span></p>
+                       <p> Email: <span id="bd_email"></span></p>
+                       <p> Razao Social: <span id="bd_razao"></span></p>
+                       <p> Rua: <span id="bd_rua"></span></p>
+                       <p> Numero: <span id="bd_numero"></span></p>
+                       <p> Complemento: <span id="bd_comp"></span></p>
+                       <p> Telefone: <span id="bd_tel"></span></p>
+                        <div class="btn">
+                            <button class="botoes" onclick="deletarEmpresa()">Deletar conta</button>
+
+                        </div>
+                    </div>
+                    <div class="formulario_cadastro">
+                       <div class="titulo"><h1>Cadastrar Dados</h1></div>
+                       <p>Razão Social:</p> <input id="input_razao_social">
+                       <p>Rua:</p> <input id="input_rua">
+                       <p>Numero:</p> <input id="input_numero">
+                       <p>Complemento:</p><input id="input_complemento">
+                       <p>Telefone:</p> <input id="input_telefone">
+                       <div class="btn">
+                       <button class="botoes" type="submit" onclick="atualizarCadastro()">Atualizar cadastro</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tela_totens" class="telas">
+                <div class="container">
+                    <div class="titulo"><h1>Gerenciamento de Totens</h1></div>
+                    <div class="descricao"><p>Cadastre novos totens aqui</p></div>
+                    <div class="formulario_cadastro">
+                        <div class="titulo"><h1>Cadastrar Totem</h1></div>
+                        <p>Hostname:</p> <input id="input_hostname">
+                        <p>Modelo:</p> <input id="input_modelo">
+                        <p>Marca:</p> <input id="input_marca">
+                        <p>Nome Estação:</p> <input id="input_estacao">
+                        <p>Data de implementação:</p> <input id="input_data_implementacao">
+                        <p>Data de fabricação:</p> <input id="input_data_fabricacao">
+                        
+                        <div class="btn">
+                            <button class="botoes" type="submit" onclick="cadastrarTotem()">Cadastrar totem</button>
+                         </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="tela_colaboradores" class="telas">
+                <div class="container">
+                    <div class="titulo"><h1>Meus Colaboradores</h1></div>
+                    <div class="descricao"><p>Cadastre seus novos colaboradores ou atualize os dados deles</p></div>
+                    <div class="formulario_cadastro">
+                        <div class="titulo"><h1>Cadastrar Colaborador</h1></div>
+                        <p>Nome:</p> <input id="input_nome">
+                        <p>CPF:</p> <input id="input_cpf">
+                        <p>Cargo:</p> <input id="input_cargo">
+                        <p>Telefone:</p> <input id="input_telefone_colaborador">
+                        <p>Email:</p> <input id="input_email">
+                        <p>Senha:</p> <input id="input_senha">
+
+                        <div class="btn">
+                            <button class="botoes" type="submit" onclick="cadastrarColaborador()">Cadastrar Colaborador</button>
+                         </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="tela_regioes" class="telas">
+                <div class="container">
+                    <div class="titulo"><h1>Estações</h1></div>
+                    <div class="descricao"><p>Aqui voce pode cadastrar novas estações, assim como atualizar os seus dados alem de exclui-las</p></div>
+                    <div class="formulario_cadastro">
+                        <div class="titulo"><h1>Cadastrar Estações</h1></div>
+                        <p>Nome:</p> <input id="input_nome_estacao">
+                        <p>Linha:</p> <input id="input_linha">
+                        <p>Bairro:</p> <input id="input_bairro">
+                        <p>CEP:</p> <input id="input_cep">
+
+                        <div class="btn">
+                            <button class="botoes" type="submit" onclick="cadastrarEstacao()">Cadastrar estação</button>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/user.js"></script>
+    <script src="./js/atualizar.js"></script>
+    <script src="./js/cadastrarEstacao.js"></script>
+    <script src="./js/cadastrarColaborador.js"></script>
+    <script src="./js/cadastrarTotem.js"></script>
+    <script src="./js/deletarEmpresa.js"></script>
+</body>
+</html>
+
+<script>
+
+    const cnpj = sessionStorage.getItem("CNPJ")
+    if(cnpj == "null"){
+        bd_cnpj.innerHTML = " "
+    }else{
+        bd_cnpj.innerHTML = cnpj
+    }
+    
+
+    const razao = sessionStorage.getItem("RAZAO_SOCIAL")
+    if(razao == "null"){
+        bd_razao.innerHTML = " "
+    }else{
+        bd_razao.innerHTML = razao
+    }
+
+    const numero = sessionStorage.getItem("NUMERO_EMPRESA")
+    if(numero == "null"){
+        bd_numero.innerHTML = " "
+    }else{
+        bd_numero.innerHTML = numero 
+    }
+
+    const rua = sessionStorage.getItem("RUA_EMPRESA")
+    if(rua == "null"){
+        bd_rua.innerHTML = " "
+    }else{
+        bd_rua.innerHTML = rua
+    }
+
+    const comple = sessionStorage.getItem("COMPLEMENTO_EMPRESA")
+    if(comple == "null"){
+        bd_comp.innerHTML = " "
+    }else{
+        bd_comp.innerHTML = comple
+    }
+
+    const email = sessionStorage.getItem("EMAIL_EMPRESA")
+    if(email == "null"){
+        bd_email.innerHTML = ""    
+    } else{
+        bd_email.innerHTML = email
+    }
+
+    const tel = sessionStorage.getItem("TELEFONE_EMPRESA")
+    if(tel == "null"){
+        bd_tel.innerHTML = " "
+    } else {
+        bd_tel.innerHTML = tel
+    }
+
+</script>

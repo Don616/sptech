@@ -1,0 +1,125 @@
+body {
+    overflow-y: hidden;
+}
+
+.container_cadastro { 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 83%;
+    
+}
+
+.div_primaria {
+    margin: 0 auto;
+    width: 25%;
+    text-align: center;
+    position: absolute;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 8px grey;
+}
+
+#img_logo_box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.titulo {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.input_cadastro {
+    width: 50%;
+    height: 80%;
+    padding: 8px 20px;
+    margin: 8px auto;
+    border-radius: 6px;
+    border-width: 2px;
+    display: flex;
+    border: 1px solid;
+}
+
+.div_secundaria .input_cadastro {
+        width: 45%;
+        margin-left: 30px;
+        display: unset;
+        padding-inline-end: 36px;
+}
+
+.div_secundaria .img_olho {
+    width: 25px;
+    cursor: pointer;
+    display: unset;
+
+}
+
+.botao_enviar {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: #E57019;
+    color: white;
+    margin: 15px 0.1% 20px 10%;
+    padding: 5px 50px 5px 50px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+
+#id_enviarCadastro:hover, #button_dica:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+
+
+#footer{
+    margin-top: unset;
+
+}
+#quadro {
+    display: none;
+
+}
+#span_quadro {
+    height: 150px;
+    width: 300px;
+    background-color: rgba(128, 128, 128, 0.781);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 800px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid;
+    box-shadow: 3px 3px 8px grey;
+    
+
+}
+#span_quadro p {
+
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+
+}
+#button_dica {
+    
+    height: 34px;
+    width: 40px;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: #E57019;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid;
+
+}

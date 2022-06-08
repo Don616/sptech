@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="./style/inicial.css">
+    <link rel="stylesheet" href="./style/usuario.css">
+    <link rel="shortcut icon" href="./style/src/¡cone favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html"><i class="fas fa-user-plus"></i></i>Cadastro</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+    
+
+    <nav id="header2">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./calculadora_index.html"><i class="fas fa-calculator"></i>Calculadora</a></ul>
+            <ul><a class="aba_nav" href="./dashboard.html"><i class="fas fa-bus"></i>Dashboard</a></ul>
+            <ul><a class="aba_nav" href="./login.html"><i class="fas fa-user-circle"></i>Olá, <span id="usuario_logado"></span> <span
+                id="usuario"></span></a></ul>
+           
+        </div>
+
+    </nav>
+    <div class="corpo">
+        <div class="sidebar">
+            <div class="user"></div>
+            <button onclick="adicionarColaborador()">Adiconar Colaborador</button>
+            <!-- <button onclick="cadastrarColaborador()">Novo Colaborador</button> -->
+            <button onclick="cadastrarRotas()">Cadastrar Rota</button>
+            <button onclick="trocarUsuario()">Trocar Usuario</button>
+            <button onclick="trocarSenha()">Trocar Senha</button>
+        </div>
+
+
+        <div class="conteudo">
+            <div id="pg0" class="inicio">
+                <img src="./style/src/favicon.ico" alt="">
+            </div>
+            <div id="pg1" class="cadastrarcolaborador">
+                <div class="cabecalho">
+                    <h1>Cadastrar novo Colaborador</h1>
+                </div>
+                <div class="inputs">
+                    <p>Digite o nome do novo Colaborador:</p> <input type="text" id="login_colaborador"><br>
+                    <p> Digite uma senha para o novo Colaborador: </p> <input type="text" id="senha_colaborador"><br>
+                    <button class="btn_cadastrar" onclick="cadastrarColaborador()">Cadastrar Colaborador</button>
+                </div>
+            </div>
+            <div id="pg2" class="cadastrarrotas">
+                <div class="cabecalho">
+                    <h1>Cadastrar nova rota</h1>
+                </div>
+                <div class="inputs">
+                    <p> Digite sua nova rota:</p> <input type="text" id="nova_rota"> <br><button class="btn_cadastrar"
+                        onclick="cadastrarRota()">Cadastrar Rota</button>
+                </div>
+            </div>
+            <div id="pg3" class="trocarusuario">
+                <div class="cabecalho">
+                    <h1>Trocar usuario</h1>
+                </div>
+                <div class="inputs">
+                    <p>Digite o nome do usuario atual: </p><input type="text" id="usuario_atual"><br>
+                    <p>Digite o nome do usuario novo:</p> <input type="text" id="usuario_novo"><br>
+                    <button class="btn_cadastrar" onclick="atualizarUsuario()">Atualizar Usuario</button>
+                </div>
+            </div>
+            <div id="pg4" class="trocarsenha">
+                <div class="cabecalho">
+                    <h1>Trocar senha</h1>
+                </div>
+                <div class="inputs">
+                    <p>Digite a senha atual:</p> <input type="text" id="senha_atual"><br>
+                    <p>Digite a nova senha:</p> <input type="text" id="senha_nova"><br>
+                    <button class="btn_cadastrar" onclick="atualizarSenha()">Atualizar Senha</button>
+                </div>
+            </div>
+            <div id="pg5" class="adicionarcolaborador">
+                <div class="cabecalho">
+                    <h1>Adicionar Colaborador</h1>
+                </div>
+                <div class="inputs">
+                    Digite o nome do colaborador: <br><input type="text" id="nome_colab"><br>
+                    Digite a senha do colaborador: <br> <input type="text" id="senha_colab"><br>
+                    Digite o nivel de permissão: <br><input type="text" id="permissao_colab"><br>
+                    <button class="btn_cadastrar"  onclick="addColaborador()">Adiconar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer2">
+
+        <ul><a class="aba_fot" href="./politicas.html"><i class="far fa-file-pdf"></i>Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html"><i class="far fa-file-alt"></i>Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html"><i class="far fa-question-circle"></i>Dúvidas Frequentes</a></ul>
+
+    </footer>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/usuario.js"></script>
+</body>
+
+</html>

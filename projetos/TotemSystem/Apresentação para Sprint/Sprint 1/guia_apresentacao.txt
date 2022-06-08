@@ -1,0 +1,44 @@
+--- Inicio ---
+
+Apresentação -- Cristian
+Contexto -- Cristian 
+Mapa do Problema -- Júlia
+Solução -- JP 
+
+--- Organização ---
+
+Planner -- Letícia 
+
+--- Ideação --- 
+
+Proto Persona -- Julia 
+User Story -- Volpe
+Product Backlog -- Donilo 
+
+--- StoryBoard ---
+
+Story Board -- Letícia
+
+--- Planejamento da Solução --- 
+
+Desenho de Negócio --  Volpe 
+Site Estruturado -- Júlia
+Github -- Donilo
+Cliente Linux (WSL) -- JP e Donilo
+Diagrama BD -- Volpe
+Azure -- Cristian
+
+--- Evolução e Aprendizagem --- 
+
+Plano de Resposta -- Letícia
+Conclusão -- JP
+
+--- Agradecimentos ---
+
+
+Cristian = 3
+Donilo = 3
+JP = 3
+Letícia = 3
+Volpe = 3
+Julia = 3

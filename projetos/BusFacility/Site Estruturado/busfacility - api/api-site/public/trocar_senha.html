@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Busfacility || Trocar Senha </title>
+
+    
+    <!-- link do script -->
+    <script src="./js/funcoes.js" ></script>
+
+    <!-- links dos icons e css -->
+    <link rel="stylesheet" href="./style/matriz.css">
+    <link rel="stylesheet" href="./style/formulario.css">
+    <link rel="stylesheet" href="./style/trocar_senha.css">
+    <link rel="shortcut icon" href="css/src/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<!-- Header -->
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html"><i class="fas fa-user-plus"></i></i>Cadastro</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+
+<!-- Trocar Senha -->
+    <div class="trocar_senha">
+        <div class="trocar_conteudo">
+
+            <div class="div_logo_trocar">
+                <img class="logo_form" src="./style/src/bus.png" alt="">
+            </div>
+
+            <div class="div_ipt_form">
+                <div>
+                    <p>Informe seu email:</p>
+                    <input id="email_trocar" class="ipt_form" type="email" placeholder="joao@provedor.com">
+
+                </div>
+                <button class="botao_form" onclick="trocar()">Enviar</button>
+            </div>
+
+            
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+
+var cont = 0;
+
+function trocar() {
+    // aguardar();
+
+    var emailVar = email_trocar.value;
+
+    console.log("FORM LOGIN: ", emailVar);
+
+    // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+    if (emailVar == "") {
+        window.alert("Preencha seu email para prosseguir!");
+        return false;
+    }
+
+    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+        window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+        return false;
+    }
+
+    fetch("/usuarios/trocar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+                resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+
+            window.location = "./atualizar_senha.html";
+
+            });
+
+        } else {
+            alert('Email inválido')
+            console.log("Houve um erro ao tentar realizar o login!");
+    
+            resposta.text().then(texto => {
+            console.error(texto);
+            });
+        }
+        
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+}
+</script>
+

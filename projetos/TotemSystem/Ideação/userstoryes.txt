@@ -1,0 +1,7 @@
+#1 - Eu como Suporte, preciso de um sistema que informe logs de erros, para que eu possa encontrar uma solução para o problema de forma eficiente;
+
+#2 - Eu, como Administrador da Estação de metro, preciso de uma informação do status de antendimento da máquina, para saber se o suporte está a caminho, se será resolvido no futuro ou se ainda não tem prazo de solução;
+
+#3 - Eu, como Adm, prefiro que nossos totens rodem em maquinas virtuais, para evitar problemas com hardware local;
+
+#4 - 

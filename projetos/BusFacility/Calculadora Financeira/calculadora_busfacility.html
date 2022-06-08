@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="calculadora_style.css">
+</head>
+<body>
+    <img src="Logo.png" alt="Logo">
+    <div id="texto">
+        <h2>Cálculo de Gastos/Lucros</h2>
+        Gasto de gasolina (em reais) de um ônibus em um itinerário:
+        <input id="ipt_gasolina" placeholder="Gasto" autofocus>
+        <br><br>
+        Média de passageiros em um ônibus desse itinerário:
+        <input id="ipt_passageiros" placeholder="Passageiros">
+        <br><br>
+        Quantidade de ônibus que fazem esse mesmo trajeto em um dia:
+        <input id="ipt_onibus" placeholder="Ônibus">
+        <br><br>
+        Quantidade de vezes que cada ônibus faz o trajeto:
+        <input id="ipt_vez" placeholder="Vezes">
+        <br><br>
+        <button onclick="calcular()">Calcular</button>
+        <br><br>
+    </div>
+    <div id="calculo">
+        <h2>Lucros e Gastos</h2>
+        O seu lucro/gasto em um dia foi de: R$ <span id="s_total"></span> <br>
+        O seu lucro/gasto em um mês foi de: R$ <span id="s_mes"></span> <br>
+        Quantos passageiros são necessários para lucrar (por ônibus): <span id="s_qto"></span>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        // Transformando os inputs em variaveis
+        var ax_gasolina = Number(ipt_gasolina.value);
+        var ax_passageiros = Number(ipt_passageiros.value);
+        var ax_onibus = Number(ipt_onibus.value);
+
+        // Cálculos
+        var ax_tarifa = ax_passageiros * 4.40;
+        var ax_lucro = ax_tarifa * ax_onibus;
+        var ax_gasto = ax_gasolina * ax_onibus;
+        var ax_total = ax_lucro - ax_gasto;
+        var ax_qto = ax_gasolina / 4.40;
+        var ax_lucro_mes = ax_lucro * 30;
+        var ax_gasto_mes = ax_gasto * 30;
+        var ax_total_mes = ax_lucro_mes - ax_gasto_mes;
+        
+        // Mundando o que aparece na tela
+        texto.style.display = 'none';
+        calculo.style.display = 'block';
+        s_total.innerHTML = ax_total.toFixed(2);
+        s_mes.innerHTML = ax_total_mes.toFixed(2)
+        s_qto.innerHTML = ax_qto.toFixed(0);
+    }
+</script>

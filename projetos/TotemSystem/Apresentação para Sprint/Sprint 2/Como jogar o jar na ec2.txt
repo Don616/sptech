@@ -1,0 +1,20 @@
+sudo su
+passwd root
+(senha urubu100)
+adduser urubu100
+(senha urubu100)
+usermod -aG sudo urubu100
+su urubu100
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install openjdk-11-jdk
+sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y
+cd
+git clone https://github.com/leticiaNCosta18/grupo9 
+cd Desktop
+mkdir totemsystem
+cp ../grupo9/Java/totemSistem/out/artifacts/totemSitem_jar/totemSitem.jar totemsystem/
+
+abre o rdp pelo acesso remoto e abre a pasta na área de trabalho com botão direito
+escolhe abrir o terminal
+
+java -jar totemSitem.jar

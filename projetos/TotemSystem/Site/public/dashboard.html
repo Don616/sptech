@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="rating" content="general" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="SPTotem">
+    <meta name="description" content="Site Institucional SPTotem">
+    <meta name="keywords" content="totem, metrô, monitoramento">
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="copyright" content="Grupo 9 © 2022" />
+    <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assests/IconTotemSystem-Circulo.png" />
+    <title>Dashboard | Totem System</title>
+
+</head>
+<body>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    
+        <div class="cabeca"  >
+            
+            <div class="logo" >
+                <a href="./user.html" id="menu"     ><img id="imagem" src="./assests/IconTotemSystem-Circulo.png" alt="logo"></a>
+            </div>
+           
+
+            <div class="links">
+                <h1 id="nome_titulo">Escolha uma Estação</h1>
+            </div>
+        </div>
+        
+
+        <div id="conteudo">
+            <div id="pag1" class="corpo">
+
+                <div class="listaEstacao">
+                    <h1>Estações:</h1>
+                    <div id="corpo_sidebarID" class="corpo_sidebar"></div>
+                </div>
+            
+                <div class="dash">
+                    <h1>Totens:</h1>
+                    <div id="alertasID" class="alertas"></div>
+
+                </div>
+                <div class="botoes_corpo1">
+                    <button id="voltar"> <a href="./user.html">Voltar</a></button>
+                    <button id = "atualizarEstacao" onclick="aparecerModal()">Atualizar Estação</button>
+                    <button id="excluirEstacao" onclick="deletarEstacao()">Excluir Estação</button>  
+                </div>
+                
+                <div id="modal">
+                    <div class="modalAtualizarEstacao" id="atualizarEstacao">
+                        <h1>Atualizar Estações</h1>
+                        <p>Nome:</p> <input id="input_nome_estacao">
+                        <p>Linha:</p> <input id="input_linha">
+                        <p>Bairro:</p> <input id="input_bairro">
+                        <p>CEP:</p> <input id="input_cep">
+            
+                        <div class="btn">
+                            <button id="voltar"><a href="./dashboard.html">Voltar</a></button>
+                            <button  type="submit" onclick="atualizarEstacao()">Atualizar estação</button>
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
+
+        </div>
+
+
+        
+
+        <div id="pag2" class="corpo2">
+            <div class="sidebar2" >
+    
+                <div class="titulo_sidebar2">
+                    <p>▽ Totem ▽</p>
+                </div>
+                <div id="corpo_sidebarID" class="corpo_sidebar2">
+                    <div id="alerta_atual" class="alertas2"></div>
+                </div>
+                <div class="botao_voltar">
+                    <button id="csv" onclick="exportar()">Download CSV</button>
+                    <button> <a href="https://app.slack.com/client/T03DZ5B98PL/C03DSGCPH8E" target="_blank">Slack</a></button>
+                    <button> <a href="https://app.pipefy.com/public/form/tMaaWuWJ" target="_blank">Contatar Suporte</a></button>
+                    <button onclick="modalTotem()">Atualizar Totem</button>
+                    <button onclick="deletarTotem()">Excluir Totem</button>
+                    <button onclick="voltarDash()">Voltar</button>
+                </div>
+
+                <div id="modal2">
+                    <div class="modalAtualizarTotem" id="atualizarTotem">
+                        <h1>Atualizar Totem</h1>
+                        <p>Nova Estação:</p> <input id="input_estacao">
+            
+                        <div class="btn">
+                            <button id="voltar"><a href="./dashboard.html">Voltar</a></button>
+                            <button  type="submit" onclick="atualizarTotem()">Atualizar Totem</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="infos">
+                <div class="retangulo">
+                    <div class="box1">
+                        <div class="box_img">
+                            <div class="campo_img" id="campoChartMem">
+                                <!--<canvas id="chartMem" class="grafico"></canvas>-->
+                            </div>
+                        </div>
+                        <div class="box_txt">
+                            <div class="txt_titulo">Memória RAM</div>
+                            <div class="txt_corpo">
+                                <!--<span id="span_memoria_total">Memoria Total:</span>-->
+                                <span id="span_memoria_uso">Memoria em uso:</span>
+                                <span id="span_memoria_disponivel">Memoria disponivel:</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box2" id="servicos">
+                        <div class="box_img">
+                            <div class="campo_img" id="campoChartServicos">
+                                <!--<canvas id="chartServicos" class="grafico"></canvas>-->
+                            </div>
+    
+                        </div>
+                        <div class="box_txt">
+                            <div class="txt_titulo" >Serviços</div>
+                            <div class="txt_corpo">
+                                <span id="span_servicos_total">Total de serviços:</span>
+                                <span id="span_servicos_ativo">Total de serviços ativos:</span>
+                                <span id="span_servicos_inativo">Total de serviços inativos:</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="box1">
+                        <div class="box_img">
+                            <div class="campo_img" id="campoChartVol">
+                                <!--<canvas id="chartCpu" class="grafico"></canvas>-->
+                            </div>
+    
+                        </div>
+                        <div class="box_txt">
+                            <div class="txt_titulo">Volumes</div>
+                            <div class="txt_corpo">
+                                <span id="span_vol_total">Volume total:</span>
+                                <span id="span_disponivel_total">Volume disponivel:</span>
+                                <span id="span_uso_total">Volume em uso:</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="box_img">
+                            <div class="campo_img_processos" id="campoChartProcessos">
+                                <!--<canvas id="chartProcessos" class="grafico"></canvas>-->
+                            </div>
+    
+                        </div>
+                        <div class="box_txt">
+                            <div class="txt_titulo">Processos</div>
+                            <div class="txt_corpo">
+                                <span id="span_ultimo_proc">Total de processos as </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="./js/dashboard_funcs.js"></script>
+    <script src="./js/cadastrarTotem.js"></script>
+    <script src="./js/exportCSV.js"></script>
+    <script src="./js/deletarEstacao.js"></script>
+    <script src="./js/deletarTotem.js"></script>
+    <script src="./js/atualizarEstacao.js"></script>
+    <script src="./js/atualizarTotem.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.login_trocar {
+    height: 400px;
+}
+
+.trocar_senha {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.trocar_conteudo {
+    height: 100%;
+
+}
+
+.div_logo_trocar {
+    height: 120px;
+
+}
+
+.ipt_form {
+    margin-bottom: 20px;
+}
+
+.logo_form {
+    margin: 20px 0;
+    height: 70px;
+}
+
+.trocar_senha .div_ipt_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

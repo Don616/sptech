@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/calculadora_style.css">
+    <link rel="stylesheet" href="./style/inicial.css">
+    <script src="./js/calculadora_script.js"></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html"><i class="fas fa-user-plus"></i></i>Cadastro</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+    <nav id="header2">
+
+        <div id="div_img">
+            <a href="./index.html" id="link_inicial">
+                <img id="img_logo" src="./style/src/bus.png">
+            </a>
+        </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./calculadora_index.html"><i class="fas fa-calculator"></i>Calculadora</a></ul>
+            <ul><a class="aba_nav" href="./simulador_bus.html"><i class="fas fa-bus"></i>Simulador</a></ul>
+            <ul><a class="aba_nav" href="./login.html"><i class="fas fa-user-circle"></i>Olá, <span id="usuario"></span></a></ul>
+        </div>
+
+    </nav>
+
+
+    <div class="main">
+
+        <div class="container">
+
+            <div id="texto">
+
+                <h2>Cálculo de Gastos/Lucros</h2>
+
+                <span>Gasto de gasolina (em reais) de um ônibus em um itinerário:</span>
+                <input id="ipt_gasolina" placeholder="Gasto" autofocus>
+
+
+                <span>Média de passageiros em um ônibus desse itinerário:</span>
+                <input id="ipt_passageiros" placeholder="Passageiros">
+
+
+                <span>Quantidade de ônibus que fazem esse mesmo trajeto em um dia:</span>
+                <input id="ipt_onibus" placeholder="Ônibus">
+
+
+                <span>Quantidade de vezes que cada ônibus faz o trajeto em um dia:</span>
+                <input id="ipt_vez" placeholder="Vezes">
+
+
+                <button class="btn_calc" onclick="calcular()">Calcular</button>
+
+
+            </div>
+
+            <div id="calculo">
+
+                <h2>Lucros e Gastos</h2>
+
+                <div class="resultado">
+                    O seu lucro/gasto em um dia foi de: 
+                    <br>
+                    R$ <span id="s_total"></span>
+                    <br>
+                    O seu lucro/gasto em um mês foi de: 
+                    <br>
+                    R$ <span id="s_mes"></span>
+                    <br>
+                    Quantos passageiros são necessários para lucrar (por ônibus): 
+                    <br>
+                    <span id="s_qto"></span>
+                </div>
+
+                    <button class="btn_calc" onclick="voltar()">Voltar</button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <footer id="footer">
+
+        <ul><a class="aba_fot" href="./politicas.html"><i class="far fa-file-pdf"></i>Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html"><i class="far fa-file-alt"></i>Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html"><i class="far fa-question-circle"></i>Dúvidas Frequentes</a></ul>
+
+    </footer>
+
+
+
+
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
