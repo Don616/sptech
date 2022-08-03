@@ -12,4 +12,11 @@ public abstract class Funcionario {
 
     public abstract Double calcSalario();
 
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }
