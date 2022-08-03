@@ -23,5 +23,8 @@ Disciplinas:
 
 - Linguagem de Programação:
 	- Java;
+	
+- Estrutura de Dados:
+	- Java;
 
 
