@@ -54,6 +54,16 @@ public class Empresa {
 
     }
 
+    public void buscaCpf(String cpf){
+
+        for(Funcionario funcionario : listaFuncionario){
+            if(funcionario.getCpf().equals(cpf)){
+                System.out.println(funcionario);
+            }
+        }
+
+    }
+
     @Override
     public String toString() {
         return "Empresa{" +
