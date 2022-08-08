@@ -38,12 +38,41 @@ public class PokemonController {
     @GetMapping("/recuperar/{indice}")
     public String recuperar(@PathVariable Integer indice){
 
-        if(indice < pokemons.size()){
+        if(indice > 0 && indice < pokemons.size()){
             return pokemons.get(indice);
         } else{
             return "Pokémon não encontrado";
         }
 
     }
+
+    @GetMapping("excluir/{indice}")
+    public String excluir(@PathVariable Integer indice){
+
+        if(indice > 0 && indice < pokemons.size()){
+            String nome = pokemons.get(indice);
+            pokemons.remove(indice);
+            return "Pokemon "+nome+" deletado!";
+        } else{
+            return "Não encontrado";
+        }
+
+    }
+
+    @GetMapping("atualizar/{indice}/{nome}")
+    public String atualizar(@PathVariable Integer indice,
+                            @PathVariable String nome){
+
+        if(indice > 0 && indice < pokemons.size()){
+            String poke = pokemons.get(indice);
+            pokemons.set(indice,nome);
+            return "Pokemon "+poke+" atualizado para: "+nome;
+
+        }else{
+            return "Não encontrado";
+        }
+
+    }
+
 
 }
