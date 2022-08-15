@@ -12,7 +12,7 @@ public class Servico implements Tributavel {
 
     @Override
     public Double getValorTributo() {
-        return getPreco()*0.12;
+        return getPreco() *0.12;
     }
 
     public String getDescricao() {
