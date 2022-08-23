@@ -24,21 +24,36 @@ public class ExemploVetor {
         //exibeVetor(vetor2);
 
 
-        for(int i = 0; i < vetor3.length; i++){
-            System.out.println("Digite o valor de ["+i+"]");
-            vetor3[i] = leitor.nextLine();
-        }
+        //for(int i = 0; i < vetor2.length; i++){
+        //    System.out.println("Digite o valor de ["+i+"]");
+        //    vetor2[i] = leitor.nextInt();
+
+        //}
+        //int soma = 0;
+        //for(int i = 0; i < vetor2.length; i++){
+
+       //     soma = vetor2[i];
+        //}
+        //System.out.println(soma);
+
+        //exibeVetor(vetor3);
 
 
-        exibeVetor(vetor3);
-
-
-
+        recursivo(leitor.nextInt());
 
 
     }
 
+    public static void recursivo(int a){
+        Scanner scanner = new Scanner(System.in);
 
+        if(a > 5){
+            System.out.println("Recursivo");
+            recursivo(scanner.nextInt());
+        } else{
+            System.out.println("saindo");
+        }
+    }
 
 
 
