@@ -66,6 +66,10 @@ public class ListaEstatica {
 
         if(indiceElemento<nroElem&&indiceElemento>=0){
             vetor[indiceElemento]=null;
+            for(int i = indiceElemento; i<nroElem-1;i++){
+                vetor[i] = vetor[i+1];
+            }
+            nroElem--;
             return true;
         } else {
             return false;
@@ -80,16 +84,7 @@ public class ListaEstatica {
     // Retorna false, se não encontrou o elemento
     // Retorna true, se encontrou e removeu o elemento
     public Boolean removeElemento(Integer elemento){
-
-        Integer contador = 0;
-        for(Integer e : vetor){
-            if(Objects.equals(e, elemento)){
-                vetor[contador]=null;
-                return true;
-            }
-            contador++;
-        }
-        return false;
+        return  removePeloIndice(busca(elemento));
     }
 
 
@@ -98,6 +93,11 @@ public class ListaEstatica {
     public void exibe(){
         System.out.println(Arrays.toString(vetor));
     }
+
+
+
+
+    
 
 
     //Métodos getVetor e getNroElem
