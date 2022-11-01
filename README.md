@@ -26,5 +26,9 @@ Disciplinas:
 	
 - Estrutura de Dados:
 	- Java;
+- Tecnologias Web:
+	- Spring Boot;
+- React:
+	- React;
 
 
