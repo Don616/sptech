@@ -13,6 +13,8 @@ public class App {
         System.out.println(isPalindromo(vet3));
         System.out.println(isPalindromo(vet4));
 
+        System.out.println(converterBinario(28));
+
     }
 
     public static Boolean isPalindromo(int[] vetor){
@@ -30,4 +32,26 @@ public class App {
         return true;
 
     }
+
+    public static int getLog(int num){
+        return (int) (Math.log(num)/Math.log(2));
+    }
+
+    public static String converterBinario(int num){
+
+        Pilha pilha = new Pilha(getLog(num)+1);
+        String binario = "";
+        while(num!=0){
+            pilha.push(num%2);
+            num=num/2;
+        }
+
+        int topo = pilha.getTopo();
+        for(int i = 0; i <= topo;i++){
+            binario += pilha.pop();
+        }
+        return binario;
+    }
+
+
 }
